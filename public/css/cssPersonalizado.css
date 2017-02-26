@@ -1,0 +1,195 @@
+
+
+html,
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+body{
+
+margin: 0;
+padding: 0;
+}
+
+@font-face {
+    font-family: FuenteFoto;
+    src: url(../font/Comfortaa-Regular.ttf);
+}
+
+*{
+ margin:0px;
+ padding:0px;
+}
+
+.container-fluid {
+ margin:0px;
+
+}
+
+.nomarggin{
+ margin:0px;
+ padding:0px;
+}
+
+#navInverse{
+ margin:0px;
+ padding:0px;
+}
+
+.row{
+    margin:0;
+     padding:0;
+    
+}
+
+
+.carousel,
+.item,
+.active {
+    height: auto;
+
+}
+
+.fondoVotar{
+
+background-image: url('../image/votaFotos.jpg');
+background-repeat:no-repeat;
+min-height: 300px;
+padding: 0px;
+}
+
+
+.btnRegistrarse{
+
+    background-color:#9d9d97 !important;
+    border-color:#9d9d97 !important;
+    color: black  !important;
+
+}
+
+.btnRegistrarse:hover{
+    background-color:#252524 !important;
+    border-color: #252524 !important;
+    color: white !important;
+
+}
+
+.btnPersonalizado:hover{
+background-color: #9d9d97 !important;
+border-color: #9d9d97 !important;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+
+.carousel-indicators{
+}
+
+p{
+    color: #9d9d97;
+    font-size: 1.5em;
+}
+
+h2{
+
+    font-size: 30px;
+    color: white;
+
+
+}
+
+/* BOTONES */
+#btnVotar{
+display: block;
+margin: 0 auto;
+width:9em;
+margin-top: 2%;
+font-size: 2em;
+}
+
+.btnPersonalizado{
+background-color: black !important;
+border-color: black !important;
+}
+/* TEXTOS */
+
+p,h2{
+       font-family:"FuenteFoto"; 
+       text-align: justify;
+
+}
+
+.txtFooter{
+ font-size: 1em;
+ padding: 0.5em;
+ margin-top: 0.6em;
+ color: #9d9d97;
+
+
+}
+
+.txtVotar{
+
+    text-align: center;
+    font-size: 3em;
+    color: white;
+
+}
+a{
+
+    font-size: 1.3em;
+}
+
+.movimiento{
+    opacity:0;
+    
+}
+
+.movimiento2{
+    opacity:0;
+    
+}
+
+.movimiento3{
+    opacity:0;
+    
+}
+
+
+/* ESTILOS ESTRUCTURA/COLOR*/
+.negro{
+background-color: black !important;
+width: auto;
+}
+
+.marginTop{
+    margin-top: 6%;
+}
+
+.centrado{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;          
+}
+
+.marginTxt{
+
+    padding-right: 90px;
+}
+
+.marginTxtL{
+
+    padding-left:90px;
+}
+
+.fondoGris {
+
+    background-color:#252524!important;;
+}
