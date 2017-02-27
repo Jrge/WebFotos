@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layout');
-});
+Route::get('/','MenuController@retornoIndex');
+
+Route::get('votar','MenuController@retornoVotar');
+
+Route::get('login','MenuController@retornoLogin');
+
+Route::get('registrar','MenuController@retornoRegistrar');
+
