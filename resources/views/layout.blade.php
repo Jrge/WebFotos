@@ -2,18 +2,17 @@
 <html>
 <head>
 	<title>Concurso Fotografía</title>
-	<!--Rutas-->
-	<!-- link minified CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/cssPersonalizado.css">
-	  <link rel="stylesheet" href="css/magic.css">
 
-	<!-- link JQUERY -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.waypoints.js"></script>
+    <!--LINKS CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{asset('css//magic.css')}}">
+    <link rel="stylesheet" href="{{asset('css//cssPersonalizado.css')}}">
+    <link rel="stylesheet" href="{{asset('css//bootstrap.min.css')}}">
 
-      <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <!--LINKS JQUEY -->
+    <script src="{{ URL::asset('js/jquery.js') }}"></script>
+    <script src="{{ URL::asset('js/jquery.waypoints.js') }}"></script>
+    <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 
 
 	</head>
