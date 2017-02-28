@@ -20,7 +20,7 @@ class Categoria extends Model
      *
      * @var array
      */
-    protected $fillable = ['Titulo', 'descripcion'];
+    protected $fillable = ['idCategoria','Titulo', 'descripcion'];
 
     /**
      * The attributes excluded from the model's JSON form.
