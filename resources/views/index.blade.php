@@ -56,7 +56,7 @@
     	<div class="row nomarggin" >
     			<div class="col-md-12 nomarggin fondoVotar">
     			<p class="txtVotar centrado marginTop">Vota por tu imagen favorita</p>
-    			<a href="#" id="btnVotar" class="btn btn-primary btn-lg active btnPersonalizado" role="button">Votar</a>
+    			<a href="http://localhost/WebFotos/public/votar" id="btnVotar" class="btn btn-primary btn-lg active btnPersonalizado" role="button">Votar</a>
     		</div>
     	</div>
 
