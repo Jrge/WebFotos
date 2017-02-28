@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Categoria;
 use Validator;
 use Auth;
 use App\User;
@@ -22,8 +23,11 @@ class UserController extends Controller{
         return View('user');
     }
 
+
+
 	//Copy paste habria k editarlo 
 	public function subirImagen(Request $request){
+        
         $rules = ['image' => 'required|image|max:1024*1024*1',];
         $messages = [
             'image.required' => 'La imagen es requerida',
