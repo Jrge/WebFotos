@@ -12,24 +12,29 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-offset-4 col-md-4">
-            <form role="form">
-              <div class="form-group">
-                <label for="ejemplo_email_1">Nombre</label>
-                <input type="text" class="form-control" id="ejemplo_email_1"
-                       placeholder="Introduce tu email">
-              </div>
-         
-              <div class="form-group">
-                <label for="ejemplo_password_1">Contraseña</label>
-                <input type="password" class="form-control" id="ejemplo_password_1" 
-                       placeholder="Contraseña">
-              </div>
-
-                <div class="checkbox">
-                  <label><input type="checkbox" value="">Recordar</label>
-                </div>
-              <button type="submit" class="btn btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin">Enviar</button>
-            </form>
+            <div class="container text-danger">
+                  @if (Session::has('message'))
+                   {{Session::get('message')}}
+                  @endif
+                 </div>
+                 <form method="post" action="{{url('auth/login')}}">
+                  {{csrf_field()}}
+                  <div class="form-group">
+                   <label for="email">Email:</label>
+                   <input type="email" name="email" class="form-control" value="{{Input::old('email')}}" />
+                   <div class="text-danger">{{$errors->first('email')}}</div>
+                  </div>
+                  <div class="form-group">
+                   <label for="password">Password:</label>
+                   <input type="password" name="password" class="form-control" />
+                   <div class="text-danger">{{$errors->first('password')}}</div>
+                  </div>
+                      <div class="form-group">
+                       <label for="remember">No cerrar sesión:</label>
+                       <input type="checkbox" name="remember" />
+                      </div>
+                  <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin">Enviar</button>
+                 </form>
         </div>
         
     </div>
