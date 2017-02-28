@@ -52,8 +52,12 @@ class UserController extends Controller{
             //$categoria = App\Models\Categoria::where('Titulo',$select)->idCategoria;
             //$categoria = new Categoria;
             //$categoria->where('Titulo',$select)->idCategoria;
-           
-            return redirect('user')->with('status', 'Su imagen en la categoria '.$select. ' ha sido subida con exito');
+           //$categoria = Categoria::where('Titulo',$select);
+          //  $categorias=Categoria::get();
+
+          // dd($categoria);
+          // $categorias->IdCategoria;
+            return redirect('user')->with('status', 'Su imagen en la categoria '.$categoria. ' ha sido subida con exito');
         }
     }
 	
