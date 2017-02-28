@@ -26,22 +26,30 @@
 	 <nav class="navbar navbar-inverse" id="navInverse">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <a class="navbar-brand" href="http://localhost/WebFotos/public/">Concurso Fotografía</a>
+	      <a class="navbar-brand" href="{{url('/')}}">Concurso Fotografía</a>
 	    </div>
 	    <ul class="nav navbar-nav">
-	      <li class="active"><a href="http://localhost/WebFotos/public/">Home</a></li>
-	      <li><a href="http://localhost/WebFotos/public/votar">Votar</a></li>
+	      <li class="active"><a href="{{url('/')}}">Home</a></li>
+	      <li><a href="{{url('votar')}}">Votar</a></li>
 	      
 	    </ul>
+
 	    <ul class="nav navbar-nav navbar-right">
-	      <li><a href="http://localhost/WebFotos/public/registrar"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-	      <li><a href="http://localhost/WebFotos/public/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+   @if (Auth::check())
+   <li><a href="{{url('user')}}">{{Auth::user()->name}}</a></li>
+   <li><a href="{{url('auth/logout')}}">Salir</a></li>
+   @else
+            <li><a href="{{url('auth/register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="{{url('auth/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+   @endif
 	    </ul>
 	  </div>
 	</nav>
 </header>
 @show
 
+          
 
 
 <body>

@@ -3,7 +3,7 @@
  <div class="container-fluid nomarggin">
     <div class="row nomarggin" >
         <div class="col-md-12 nomarggin">
-            <img class="img-responsive" src="image/registrar/registrar.png">
+            <img class="img-responsive" src="../image/registrar/registrar.png">
         </div>
     </div>
 </div>
