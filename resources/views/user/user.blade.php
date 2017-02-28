@@ -1,6 +1,13 @@
+<?php
+use App\Models\Categoria;
+$categorias=Categoria::get();
+
+?>
 
 @extends('layout')
 @section('content')
+
+
 <div class="container-fluid nomarggin">
     <div class="row nomarggin" >
         <div class="col-md-12 nomarggin">
@@ -23,8 +30,7 @@
 </div>
 <hr />
 @endif
-
-<did class="container-fluid">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-6">
 			
@@ -41,15 +47,23 @@
 					<input type="file" name="image" />
 					<div class='text-danger'>{{$errors->first('image')}}</div>
 				</div>
+
+				@foreach ($categorias as $categoria)
+			   	<div class="radio">
+	      			<label><input type="radio" name="optradio" value='{{ $categoria->Titulo }}'> {{ $categoria->Titulo }}</label>
+	   			</div>
+				@endforeach
+
+
 				<button type='submit' class='btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnLargo'>Subir Imagen</button>
 			</form>
+			<div>
 
+			
+			</div>
 		</div>
 
 
 	</div>
 </div>
-
-
-
 @endsection
