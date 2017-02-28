@@ -24,6 +24,8 @@ padding: 0;
  padding:0px;
 }
 
+
+
 .container-fluid {
  margin:0px;
 
@@ -120,7 +122,7 @@ border-color: black !important;
 }
 /* TEXTOS */
 
-p,h2{
+p,h2,form{
        font-family:"FuenteFoto"; 
        text-align: justify;
 
@@ -191,5 +193,34 @@ width: auto;
 
 .fondoGris {
 
-    background-color:#252524!important;;
+    background-color:#252524 !important;;
 }
+
+/* ESTILOS REGISTRAR */
+
+label{
+ color: #9d9d97;
+font-size: 16px;
+font-weight:100;
+}
+
+.btnFormulario{
+    height: 40px !important;
+    width: 100px !important;
+    font-size: 17px !important;
+    margin-bottom: 150px;
+    padding: 0px !important;
+
+}
+
+/* ESTILOS LOGIN */
+
+.btnLogin{
+  
+    margin-bottom: 270px !important;
+
+}
+
+
+
+
