@@ -222,6 +222,26 @@ font-weight:100;
 
 }
 
+/* PANEL CONTROL */
+
+.userName{
+    margin-top: -0.1em !important;
+text-align: center !important;
+ color: #9d9d97 !important;
+font-size: 3em !important;
+font-family:"FuenteFoto" !important; 
+
+}
+
+.colorGrey{
+color: #9d9d97 !important;
+}
+
+.btnLargo{
+
+    width: 150px !important;
+    height: 40px !important;
+}
 
 
 

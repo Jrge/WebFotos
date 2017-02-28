@@ -17,5 +17,18 @@ Route::get('votar','MenuController@retornoVotar');
 
 Route::get('login','MenuController@retornoLogin');
 
-Route::get('registrar','MenuController@retornoRegistrar');
+Route::get('auth/register','MenuController@retornoRegistrar');
 
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+
+Route::get('user', 'UserController@user');
+
+//Imagenes
+//Route::get('user', 'UserController@profile');
+Route::post('user', 'UserController@subirImagen');

@@ -56,7 +56,7 @@
     	<div class="row nomarggin" >
     			<div class="col-md-12 nomarggin fondoVotar">
     			<p class="txtVotar centrado marginTop">Vota por tu imagen favorita</p>
-    			<a href="http://localhost/WebFotos/public/votar" id="btnVotar" class="btn btn-primary btn-lg active btnPersonalizado" role="button">Votar</a>
+    			<a href="{{url('votar')}}" id="btnVotar" class="btn btn-primary btn-lg active btnPersonalizado" role="button">Votar</a>
     		</div>
     	</div>
 
@@ -71,7 +71,7 @@
     			<div class="col-md-5 nomarggin">
 				<h2>Participa</h2>
 				<p>Si quieres participar es muy sencillo, sube tu fotografía, puedes participar en las categorias de naturaleza, urbano y artística, recibe votaciones.Las tres fotografías con más votaciones tendrán grandes recompensas.Para ello solo tienes que registrarte en el siguiente enlace</p>
-    			<a href="http://localhost/WebFotos/public/registrar" class="btn btn-primary btn-lg active btnRegistrarse" role="button">Registrarse</a>
+    			<a href="{{url('auth/register')}}" class="btn btn-primary btn-lg active btnRegistrarse" role="button">Registrarse</a>
     		</div>
     	</div>
     </div>
