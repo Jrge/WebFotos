@@ -13,6 +13,11 @@
     {{csrf_field()}}
 
 
+    @foreach ($categorias as $categoria)
+        
+        <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class='btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnLargo'>Votar la categoria {{$categoria->Titulo}}</button>
+    @endforeach  
+
 
 
 @if (Session::has('fotos'))
@@ -21,12 +26,6 @@
         <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class='btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnLargo'>Votar</button>
     @endforeach  
 
-@else
-
-    @foreach ($categorias as $categoria)
-        
-        <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class='btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnLargo'>Votar la categoria {{$categoria->Titulo}}</button>
-    @endforeach   
 @endif
 
 	</form>
