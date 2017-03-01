@@ -23,10 +23,6 @@ $fotos=Foto::where('idCategoria',2)->get();
     <div class="row nomarggin" >
     <form method='post' action='{{url("votar")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
-    @foreach($fotos as $foto)
-    	<img src="fotografias/{{$foto->nombreArchivo }}"/>
-		<button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class='btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnLargo'>Votar</button>
-	@endforeach
 	</form>
         <div class="col-md-4 nomarggin">
             <img class="img-responsive" src="image/votar/imagenes.png">

@@ -13,7 +13,7 @@ class Categorias extends Migration
     public function up()
     {
         Schema::create('Categorias', function (Blueprint $table) {
-            $table->increments('idCategoria');
+            $table->increments('idCategoria')->unique();
             $table->string('Titulo');
             $table->string('descripcion');
             $table->rememberToken();

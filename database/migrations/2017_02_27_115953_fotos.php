@@ -13,13 +13,12 @@ class Fotos extends Migration
     public function up()
     {
         Schema::create('Fotos', function (Blueprint $table) {
-            $table->increments('idFoto');
+            $table->increments('idFoto')->unique();
             $table->integer('idCategoria');
             $table->integer('idParticipante');
             $table->string('Titulo');
             $table->string('descripcion');
             $table->string('nombreArchivo');
-            $table->date('fecha_hora');
             $table->integer('votos');
             $table->rememberToken();
             $table->timestamps();

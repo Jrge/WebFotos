@@ -13,7 +13,7 @@
 
 Route::get('/','MenuController@retornoIndex');
 
-Route::get('votar','MenuController@retornoVotar');
+Route::get('votar','VotoController@getVotar');
 Route::post('votar','VotoController@gestionarVoto');
 
 Route::get('login','MenuController@retornoLogin');

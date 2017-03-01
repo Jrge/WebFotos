@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Foto extends Model
 {
-
+    protected $primaryKey = 'idFoto';
 
     /**
      * The database table used by the model.
@@ -19,7 +19,7 @@ class Foto extends Model
      *
      * @var array
      */
-    protected $fillable = ['idCategoria', 'idParticipante','Titulo','descripcion','nombreArchivo','fecha_hora','votos'];
+    protected $fillable = ['idCategoria', 'idParticipante','Titulo','descripcion','nombreArchivo','votos'];
 
     /**
      * The attributes excluded from the model's JSON form.
