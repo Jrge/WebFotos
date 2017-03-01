@@ -34,21 +34,15 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
     }
 
     public function devuelveCategorias(){
-
        return View('admin.adminCategorias');
-
     }
 
     public function devuelveFotos(){
-
        return View('admin.adminFotos');
-
     }
 
     public function devuelveUsuarios(){
-
        return View('admin.adminAdministradores');
-
     }
 
     public function gestionarCategorias(){

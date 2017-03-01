@@ -193,7 +193,7 @@ width: auto;
 
 .fondoGris {
 
-    background-color:#252524 !important;;
+    background-color:#252524 !important;
 }
 
 /* ESTILOS REGISTRAR */
@@ -306,12 +306,11 @@ color: #9d9d97 !important;
 
 .Artístico{
 
-
     background-image: url('../image/btn/BtnArtistico.png') !important;
-   background-repeat: no-repeat;
-  height: 184px;
-  width: 190px;
-   background-color: Transparent;
+    background-repeat: no-repeat;
+    height: 184px;
+    width: 190px;
+    background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
@@ -362,6 +361,23 @@ color: #9d9d97 !important;
 
 .sintitulo:hover{
     background-image: url('../image/btn/BtnDesconocidoHover.png');
+}
+
+/* CARGAR IMAGENES VOTACIONES*/
+.marginFoto{
+    margin-top:20px !important;
+    border-radius: 10px;
+
+}
+
+.btnDebajoImagen{
+    height: 40px !important;
+    width: 100px !important;
+    font-size: 17px !important;
+    padding: 0px !important;
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 
