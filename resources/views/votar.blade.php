@@ -12,13 +12,25 @@
     <form method='post' action='{{url("votar")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
 
+    </form>
+        <div class="col-md-12 nomarggin">
+            <img class="img-responsive" src="image/votar/imagenes.png">
+        </div>
+    </div>
+</div>
 
-    @foreach ($categorias as $categoria)
-        
-        <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class='btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnLargo'>Votar la categoria {{$categoria->Titulo}}</button>
-    @endforeach  
+<div class="container-fluid">
+    <div class="row">
+        @foreach ($categorias as $categoria)
+        <div class="col-md-4">
 
+            <h1 class="tituloCategorias center-block">{{$categoria->Titulo}}</h1>
+            <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class='center-block {{$categoria->Titulo}}'></button>
+            </div>
 
+        @endforeach  
+    </div>
+</div>
 
 @if (Session::has('fotos'))
     @foreach (Session::get('fotos') as $foto)
@@ -28,10 +40,5 @@
 
 @endif
 
-	</form>
-        <div class="col-md-4 nomarggin">
-            <img class="img-responsive" src="image/votar/imagenes.png">
-        </div>
-    </div>
-</div>
+	
 @endsection

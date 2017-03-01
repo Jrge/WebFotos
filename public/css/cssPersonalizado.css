@@ -270,3 +270,89 @@ a:hover{
     text-decoration: none;
 }
 
+
+
+.tituloCategorias{
+text-align: center !important;
+font-size: 30px;
+color: #9d9d97 !important;
+
+}
+
+.Naturaleza{
+
+
+    background-image: url('../image/btn/Btnnaturaleza.png') !important;
+   background-repeat: no-repeat;
+  height: 184px;
+  width: 190px;
+   background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+}
+
+
+.Naturaleza:hover{
+
+
+    background-image: url('../image/btn/BtnnaturalezaHover.png') !important;
+  
+
+}
+
+.Artístico{
+
+
+    background-image: url('../image/btn/BtnArtistico.png') !important;
+   background-repeat: no-repeat;
+  height: 184px;
+  width: 190px;
+   background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+}
+
+
+.Artístico:hover{
+
+
+    background-image: url('../image/btn/BtnArtisticoHover.png') !important;
+  
+
+}
+
+.Urbano{
+
+
+    background-image: url('../image/btn/BtnUrbano.png') !important;
+   background-repeat: no-repeat;
+  height: 184px;
+  width: 190px;
+   background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+}
+
+
+.Urbano:hover{
+
+
+    background-image: url('../image/btn/BtnUrbanoHover.png') !important;
+  
+
+}
+
+
+
