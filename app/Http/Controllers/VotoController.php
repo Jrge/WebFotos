@@ -32,7 +32,11 @@ class VotoController extends Controller
         
         }else{ //SI NO SE MUESTRAN LAS FOTOS DE LA CATEGORIA SELECCIONADA EN getVotar
             $categoria=Input::get('selectCategoria');
-            $fotos=Foto::where('idCategoria',$categoria)->get();
+
+            $fotos=Foto::where('idCategoria',$categoria)
+                        ->where('visible',true)
+                        ->get();
+
             return redirect('votar')->with('fotos',$fotos);      
 
         }

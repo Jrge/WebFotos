@@ -41,8 +41,8 @@ Route::post('user', 'UserController@subirImagen');
 */
 
 Route::post('adminCategorias','AdminController@gestionarCategorias');
-Route::post('adminFotos', 'AdminController@gestinarFotos');
-Route::post('adminAdministradores', 'AdminController@gestinarUsuarios');
+Route::post('adminFotos', 'AdminController@gestionarFotos');
+Route::post('adminAdministradores', 'AdminController@gestionarUsuarios');
 
 Route::get('admin', 'AdminController@mostrarAdmin');
 Route::get('adminCategorias','AdminController@devuelveCategorias');

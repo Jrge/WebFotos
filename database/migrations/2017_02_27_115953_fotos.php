@@ -20,6 +20,7 @@ class Fotos extends Migration
             $table->string('descripcion');
             $table->string('nombreArchivo');
             $table->integer('votos');
+            $table->boolean('visible',false);
             $table->rememberToken();
             $table->timestamps();
         });

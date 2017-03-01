@@ -32,7 +32,7 @@
     </div>
 </div>
 
-</form>
+
 @if (Session::has('fotos'))
     @foreach (Session::get('fotos') as $foto)
         <img src="fotografias/{{$foto->nombreArchivo }}"/>
@@ -43,3 +43,4 @@
 
 	
 @endsection
+</form>
