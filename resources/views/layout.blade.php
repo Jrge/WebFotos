@@ -36,8 +36,14 @@
 
 	    <ul class="nav navbar-nav navbar-right">
    @if (Auth::check())
-   <li><a href="{{url('user')}}">{{Auth::user()->name}}</a></li>
-   <li><a href="{{url('auth/logout')}}">Salir</a></li>
+      @if (Auth::user()->admin)
+      <li><a href="{{url('admin')}}">Panel de Administrador</a></li>
+      <li><a href="{{url('auth/logout')}}">Salir</a></li>
+
+      @else
+     <li><a href="{{url('user')}}">{{Auth::user()->name}}</a></li>
+     <li><a href="{{url('auth/logout')}}">Salir</a></li>
+     @endif
    @else
             <li><a href="{{url('auth/register')}}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
             <li><a href="{{url('auth/login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>

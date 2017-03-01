@@ -89,6 +89,11 @@ class AuthController extends Controller
                 ]
                 , $request->has('remember')
                 )){
+            /*
+            Si el login es de administrador retornara el panel de control
+            */
+                if (Auth::user()->admin) return view('admin.admin');
+                else
                 return redirect()->intended($this->redirectPath());
         }
         else{

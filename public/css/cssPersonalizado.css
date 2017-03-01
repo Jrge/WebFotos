@@ -245,3 +245,28 @@ color: #9d9d97 !important;
 
 
 
+/*MENU ADMIN*/
+
+.adminSlider:link{
+
+color: #9d9d97 !important;
+
+}
+
+.adminSlider:hover{
+
+color: #9d9d97 !important;
+
+}
+
+a {
+    color: #9d9d97;
+    text-decoration: none;
+}
+
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+

@@ -33,3 +33,18 @@ Route::get('user', 'UserController@user');
 //Imagenes
 //Route::get('user', 'UserController@profile');
 Route::post('user', 'UserController@subirImagen');
+
+/* 
+	Si el usuario es administrador mostramos una vista de lo contrario lo 
+	expulsamos redireccionándolo de dónde vino.(ver metodo isadmin en AdminController)
+
+*/
+
+Route::post('adminCategorias','AdminController@gestionarCategorias');
+Route::post('adminFotos', 'AdminController@gestinarFotos');
+Route::post('adminAdministradores', 'AdminController@gestinarUsuarios');
+
+Route::get('admin', 'AdminController@mostrarAdmin');
+Route::get('adminCategorias','AdminController@devuelveCategorias');
+Route::get('adminFotos', 'AdminController@devuelveFotos');
+Route::get('adminAdministradores', 'AdminController@devuelveUsuarios');
