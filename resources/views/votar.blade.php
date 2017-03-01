@@ -19,7 +19,6 @@
     </div>
 </div>
 
-<div class="container-fluid">
 
     <div class="row">
         @foreach ($categorias as $categoria)
@@ -32,13 +31,16 @@
         @endforeach  
     </div>
 </div>
- <div class="col-md-12 nomarggin">
-            <img class="img-responsive" src="image/votar/votaTuImagen.png">
-        </div>
+
+
 <div class="container-fluid">
     <div class="row">
 @if (Session::has('fotos'))
+<div class="col-md-12 nomarggin">
+  <img class="img-responsive" src="image/votar/votaTuImagen.png">
     @foreach (Session::get('fotos') as $foto)
+
+</div>
      <div class="col-md-4">
         <img class="img-responsive marginFoto" src="fotografias/{{$foto->nombreArchivo }}"/>
         <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class='btn-primary btn-lg active btnDebajoImagen btnRegistrarse'>Votar</button> 
