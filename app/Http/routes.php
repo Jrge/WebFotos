@@ -14,6 +14,7 @@
 Route::get('/','MenuController@retornoIndex');
 
 Route::get('votar','MenuController@retornoVotar');
+Route::post('votar','VotoController@gestionarVoto');
 
 Route::get('login','MenuController@retornoLogin');
 

@@ -38,7 +38,7 @@ $categorias=Categoria::get();
 
 		</div >
 
-		<div class="col-md-6">
+		<div class="col-md-4">
 			<h2 class="colorGrey">Subir imagen</h2>
 			<form method='post' action='{{url("user")}}' enctype='multipart/form-data'>
 				{{csrf_field()}}
@@ -46,11 +46,24 @@ $categorias=Categoria::get();
 					<label for='image'>Imagen: </label>
 					<input type="file" name="image" />
 					<div class='text-danger'>{{$errors->first('image')}}</div>
+
+                    <label for="name">Titulo:</label>
+                    <input type="text" name="titulo" class="form-control" value="{{ old('titulo') }}" />
+                    <div class="text-danger">{{$errors->first('titulo')}}</div>
+
+                    <label for="name">Descripcion:</label>
+                    <input type="text" name="descripcion" class="form-control" value="{{ old('descripcion') }}" />
+                    <div class="text-danger">{{$errors->first('descripcion')}}</div>
 				</div>
 
 				@foreach ($categorias as $categoria)
 			   	<div class="radio">
+			   		@if($categoria->idCategoria==1)
+	      			<label><input type="radio" name="optradio" checked="true" value='{{ $categoria->Titulo }}'> {{ $categoria->Titulo }}</label>
+	      			@else
 	      			<label><input type="radio" name="optradio" value='{{ $categoria->Titulo }}'> {{ $categoria->Titulo }}</label>
+	      			@endif
+
 	   			</div>
 				@endforeach
 

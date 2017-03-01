@@ -13,6 +13,7 @@ class Fotos extends Migration
     public function up()
     {
         Schema::create('Fotos', function (Blueprint $table) {
+            $table->increments('idFoto');
             $table->integer('idCategoria');
             $table->integer('idParticipante');
             $table->string('Titulo');

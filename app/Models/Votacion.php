@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Modelos;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,13 +13,13 @@ class Votacion extends Model
      *
      * @var string
      */
-
+    protected $table = 'votaciones';
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['ip', 'idFoto','fecha_hora'];
+    protected $fillable = ['ip', 'idFoto'];
 
     /**
      * The attributes excluded from the model's JSON form.
