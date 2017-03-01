@@ -12,7 +12,7 @@
     <form method='post' action='{{url("votar")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
 
-    </form>
+
         <div class="col-md-12 nomarggin">
             <img class="img-responsive" src="image/votar/imagenes.png">
         </div>
@@ -32,10 +32,11 @@
     </div>
 </div>
 
+</form>
 @if (Session::has('fotos'))
     @foreach (Session::get('fotos') as $foto)
         <img src="fotografias/{{$foto->nombreArchivo }}"/>
-        <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class='btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnLargo'>Votar</button>
+        <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class='btn-primary btn-lg active btnRegistrarse btnFormulario  '>Votar</button>
     @endforeach  
 
 @endif
