@@ -25,7 +25,7 @@
         <div class="col-md-4">
 
             <h1 class="tituloCategorias center-block">{{$categoria->Titulo}}</h1>
-            <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class='center-block {{$categoria->Titulo}}'></button>
+            <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class='center-block {{$categoria->Titulo}} sintitulo'></button>
             </div>
 
         @endforeach  

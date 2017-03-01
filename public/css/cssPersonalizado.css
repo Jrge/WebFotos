@@ -322,11 +322,7 @@ color: #9d9d97 !important;
 
 
 .Artístico:hover{
-
-
     background-image: url('../image/btn/BtnArtisticoHover.png') !important;
-  
-
 }
 
 .Urbano{
@@ -347,12 +343,25 @@ color: #9d9d97 !important;
 
 
 .Urbano:hover{
-
-
     background-image: url('../image/btn/BtnUrbanoHover.png') !important;
-  
-
 }
 
+.sintitulo{
+    background-image: url('../image/btn/BtnDesconocido.png');
+    background-repeat: no-repeat;
+    height: 184px !important;
+    width: 190px !important;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+}
+
+
+.sintitulo:hover{
+    background-image: url('../image/btn/BtnDesconocidoHover.png');
+}
 
 
