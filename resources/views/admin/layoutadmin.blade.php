@@ -34,7 +34,7 @@
             </nav>
   		</div>
         <div class="col-md-2"></div>
-  		<div class="col-md-2 nomarggin">
+  		<div class="col-md-6 nomarggin">
 		@yield('contenidoAdmin')
 		</div>
 

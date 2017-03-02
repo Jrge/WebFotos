@@ -20,6 +20,7 @@ class AdminController extends Controller
 
        public function __construct(){
        $this->middleware('auth');
+     
     }
 
  /* Metodo que retorna si es administrador*/
@@ -50,13 +51,13 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
             $fotos=Foto::paginate(5);
 
-       return View('admin.adminFotos')->with('fotos',$fotos);;
+       return View('admin.adminFotos')->with('fotos',$fotos);
 
     }
 
     public function devuelveUsuarios(){
-
-       return View('admin.adminAdministradores');
+    $listaUsuarios = User::paginate(2);
+       return View('admin.adminAdministradores',compact('listaUsuarios'));
 
     }
 
@@ -86,9 +87,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             $categoria=new Categoria;
             $categoria->Titulo=$request->titulo;
             $categoria->descripcion=$request->descripcion;
-            $categoria->save();
-
-            
+            $categoria->save();          
             return redirect("adminCategorias")
             ->with("mensaje", "Categoria creada correctamente");
         }
@@ -114,6 +113,23 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
 
      public function gestionarUsuarios(Request $request){
+           // $claseExitosa="alert alert-success";
+            //$claseError="alert alert-danger";
+            $idUsuario = $request->input('promocionar');
+            $usuario=User::find($idUsuario);
+            if($usuario!=null && $usuario->admin<1){
+                $usuario->admin=true;
+                $usuario->save();             
+                return redirect("adminAdministradores")
+                //->with("claseMsg","alert alert-success")             
+                ->with("mensaje", "Usuario promocionado correctamente.");
+            }elseif($usuario!=null && $usuario->admin>=1){
+                return redirect("adminAdministradores")
+                ->with("mensaje", "Este usuario ya es Administrador")
+                //->with("claseMsg","alert alert-danger")
+                ->withInput();  
+            }
+        /*
         $rules = [
                 'email' => 'required|email|max:255|',
             ];
@@ -122,7 +138,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             'email.email' => 'El formato de email es incorrecto',
             'email.max' => 'El máximo de caracteres permitidos son 255',
         ];
-
+        
 
         $validator = Validator::make($request->all(), $rules, $messages);
 
@@ -131,6 +147,8 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             ->withErrors($validator)
             ->withInput();
         }else{
+
+
             $usuario=User::where('email',$request->email)->first();
 
             if($usuario!=null && $usuario->admin<1){
@@ -152,6 +170,8 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
 
         }
+
+        */
 
     }
     

@@ -47,13 +47,15 @@ padding: 0;
     
 }
 
-
+/*
 .carousel,
 .item,
 .active {
     height: auto;
 
 }
+
+*/
 
 .fondoVotar{
 
@@ -402,4 +404,15 @@ color: #9d9d97 !important;
     height: auto;
 
 
+}
+
+span{
+
+    font-size: 16px;
+}
+
+
+a{
+
+    font-size: 16px;
 }
