@@ -14,7 +14,7 @@ class Votaciones extends Migration
     {
         Schema::create('Votaciones', function (Blueprint $table) {
             $table->increments('idVoto')->unique();
-            $table->integer('ip');
+            $table->string('ip');
             $table->integer('idFoto');
             $table->rememberToken();
             $table->timestamps();
