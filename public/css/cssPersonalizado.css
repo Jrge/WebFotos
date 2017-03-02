@@ -225,11 +225,12 @@ font-weight:100;
 /* PANEL CONTROL */
 
 .userName{
-    margin-top: -0.1em !important;
+margin-top: -0.1em !important;
 text-align: center !important;
  color: #9d9d97 !important;
 font-size: 3em !important;
 font-family:"FuenteFoto" !important; 
+margin-bottom: 20px;
 
 }
 
@@ -378,6 +379,11 @@ color: #9d9d97 !important;
     border: 0;
     margin-top: 5px;
     margin-bottom: 15px;
+}
+
+.btnMarginTop{
+
+    margin-top: 10px;
 }
 
 
