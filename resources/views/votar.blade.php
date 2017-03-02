@@ -37,7 +37,7 @@
     <div class="row">
 @if (Session::has('fotos'))
 <div class="col-md-12 nomarggin">
-  <img class="img-responsive" src="image/votar/votaTuImagen.png">
+  <img class="img-responsive" src="image/votar/votar.jpg">
     @foreach (Session::get('fotos') as $foto)
 
 </div>
