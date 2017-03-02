@@ -38,9 +38,10 @@
 @if (Session::has('fotos'))
 <div class="col-md-12 nomarggin">
   <img class="img-responsive" src="image/votar/votar.jpg">
+</div>
+
     @foreach (Session::get('fotos') as $foto)
 
-</div>
      <div class="col-md-4">
         <img class="img-responsive marginFoto" src="fotografias/{{$foto->nombreArchivo }}"/>
         <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class='btn-primary btn-lg active btnDebajoImagen btnRegistrarse'>Votar</button> 

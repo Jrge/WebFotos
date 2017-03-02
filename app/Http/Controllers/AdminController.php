@@ -96,8 +96,19 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
     }
 
 
-     public function gestionarFotos(){
+     public function gestionarFotos(Request $request){
 
+        $fotos_checkeadas=$request->input('fotos');
+        if(is_array($fotos_checkeadas)){
+
+            foreach($fotos_checkeadas as $nombreFoto){
+            $foto=Foto::where('nombreArchivo',$nombreFoto)->first();
+            $foto->visible=true;
+              $foto->save();
+            }
+        return redirect("adminFotos")
+        ->with("mensaje", "Fotos modificadas correctamente");
+        }
 
     }
 
