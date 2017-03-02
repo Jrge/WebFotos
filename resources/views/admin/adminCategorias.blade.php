@@ -17,7 +17,7 @@
    <label for="descripcion">Descripcion Categoria:</label>
    <input type="text" name="descripcion" class="form-control" value="{{Input::old('descripcion')}}" />
    <div class="text-danger">{{$errors->first('descripcion')}}</div>
- 	<button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin">Enviar</button>
+ 	<button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnMarginTop">Enviar</button>
 
 
 
