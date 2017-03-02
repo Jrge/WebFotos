@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Categoria;
+use App\Models\Foto;
+
+use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Collection;
 
 
 class AdminController extends Controller
@@ -37,13 +41,16 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
     public function devuelveCategorias(){
 
+
        return View('admin.adminCategorias');
 
     }
 
     public function devuelveFotos(){
 
-       return View('admin.adminFotos');
+            $fotos=Foto::paginate(5);
+
+       return View('admin.adminFotos')->with('fotos',$fotos);;
 
     }
 
