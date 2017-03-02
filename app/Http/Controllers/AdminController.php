@@ -102,8 +102,45 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
     }
 
 
-     public function gestionarUsuarios(){
+     public function gestionarUsuarios(Request $request){
+        $rules = [
+                'email' => 'required|email|max:255|',
+            ];
 
+        $messages = [
+            'email.email' => 'El formato de email es incorrecto',
+            'email.max' => 'El máximo de caracteres permitidos son 255',
+        ];
+
+
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()){
+            return redirect("adminAdministradores")
+            ->withErrors($validator)
+            ->withInput();
+        }else{
+            $usuario=User::where('email',$request->email)->first();
+
+            if($usuario!=null && $usuario->admin<1){
+                $usuario->admin=true;
+                $usuario->save();
+                
+                return redirect("adminAdministradores")
+                ->with("mensaje", "Usuario promocionado correctamente.");                
+            }elseif($usuario!=null && $usuario->admin>=1){
+                return redirect("adminAdministradores")
+                ->with("mensaje", "Este usuario ya es Administrador")
+                ->withInput();  
+            }else{
+                return redirect("adminAdministradores")
+                ->with("mensaje", "Este correo no existe")
+                ->withInput();  
+            }
+
+
+
+        }
 
     }
     
