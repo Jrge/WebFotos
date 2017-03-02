@@ -15,7 +15,7 @@
 	<input type="email" name="email" class="form-control" value="{{Input::old('email')}}" />
 	<div class="text-danger">{{$errors->first('email')}}</div>
 
- 	<button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin">Promocionar</button>
+ 	<button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnMarginTopP">Promocionar</button>
 
 
 	</div>
