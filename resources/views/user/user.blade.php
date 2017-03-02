@@ -32,10 +32,11 @@ $categorias=Categoria::get();
 @endif
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-6">
-			
+		<div class="col-md-4">
+<!--		
 			<img src='{{url(Auth::user()->fotografias)}}' class='img-responsive'  />
-
+			<h1>Ultima imagen subida</h1>
+-->
 		</div >
 
 		<div class="col-md-4">
