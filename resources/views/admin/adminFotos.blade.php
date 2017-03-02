@@ -18,7 +18,7 @@
 	
 
 	</div>
-		<button type="submit" name="btnGuardar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin">Guardar Cambios</button>	
+		<button type="submit" name="btnGuardar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnIm">Guardar Cambios</button>	
     </form>
 
  		<?php echo $fotos->render(); ?>
