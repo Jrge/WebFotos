@@ -12,16 +12,10 @@
     <form method='post' action='{{url("votar")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
 
-<<<<<<< HEAD
      <div class="col-md-12 nomarggin">
         <img class="img-responsive" src="image/votar/votar.jpg">
     </div>
-=======
-    
-        <div class="col-md-12 nomarggin">
-            <img class="img-responsive" src="image/votar/imagenes.png">
-        </div>
->>>>>>> origin/master
+
     </div>
 </div>
 
