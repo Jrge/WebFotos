@@ -12,7 +12,7 @@
     <form method='post' action='{{url("votar")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
 
-
+    
         <div class="col-md-12 nomarggin">
             <img class="img-responsive" src="image/votar/imagenes.png">
         </div>

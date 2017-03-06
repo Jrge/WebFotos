@@ -22,4 +22,15 @@ class Foto extends Model
         $this->nombreArchivo=$nombreArchivo;
         $this->save();
     }
+
+    public function ponerVisible(){
+        $this->visible=true;
+        $this->save();
+    }
+
+
+    public function aumentarVoto(){
+        $this->votos++;
+        $this->save();
+    }
 }

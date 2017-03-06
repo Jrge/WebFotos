@@ -3,28 +3,32 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Votacion extends Model
 {
 
-
-    /**
-     * The database table used by the model.
-     *
-     * @var string
-     */
     protected $table = 'votaciones';
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
+
+  
     protected $fillable = ['ip', 'idFoto'];
 
-    /**
-     * The attributes excluded from the model's JSON form.
-     *
-     * @var array
-     */
+
     protected $hidden = ['remember_token'];
+
+
+
+    public function posibleVotar()
+    {
+        $fechaVoto=$this->created_at;
+        $fechaActual=Carbon::now();
+        return ($fechaActual->subDay(1)>$fechaVoto);
+    }
+
+    public function votar($idFoto,$request)
+    {
+        $this->idFoto=$idFoto;
+        $this->ip=$request->ip();
+        $this->save();
+    }
 }
