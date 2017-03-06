@@ -1,3 +1,4 @@
+/* ESTRUCTURA GENERICA */
 
 
 html,
@@ -8,35 +9,71 @@ body {
     background-color: black;
 }
 
-body{
-
-margin: 0;
-padding: 0;
-}
 
 @font-face {
     font-family: FuenteFoto;
     src: url(../font/Comfortaa-Regular.ttf);
 }
 
-*{
- margin:0px;
- padding:0px;
+p{
+    color: #9d9d97;
+    font-size: 1.6vw;
+}
+
+h2{
+
+    font-size: 2vw;
+    color: white;
+}
+
+
+p,h2,form{
+       font-family:"FuenteFoto"; 
+       text-align: justify;
+
+}
+
+a{
+
+    font-size: 1.3em;
+}
+
+
+label{
+ color: #9d9d97;
+font-size: 16px;
+font-weight:100;
+}
+
+
+span{
+
+    font-size: 16px;
+}
+
+
+a{
+
+    font-size: 16px;
+}
+
+
+a {
+    color: #9d9d97;
+    text-decoration: none;
+}
+
+
+a:hover{
+    color: black;
+    text-decoration: none;
 }
 
 
 
-.container-fluid {
- margin:0px;
-
-}
+/* ESTILOS GENERICOS */
 
 .nomarggin{
- margin:0px;
- padding:0px;
-}
-
-#navInverse{
  margin:0px;
  padding:0px;
 }
@@ -47,15 +84,37 @@ padding: 0;
     
 }
 
-/*
-.carousel,
-.item,
-.active {
-    height: auto;
 
+.centrado{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;          
 }
 
-*/
+
+.marginTop{
+    margin-top: 6%;
+}
+
+
+
+.marginTxt{
+
+    padding-right: 90px;
+}
+
+.marginTxtL{
+
+    padding-left:90px;
+}
+
+.fondoGris {
+
+    background-color:#252524 !important;
+}
+
+
+/* ESTILOS INDEX */
 
 .fondoVotar{
 
@@ -64,6 +123,33 @@ background-repeat:no-repeat;
 min-height: 300px;
 padding: 0px;
 }
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-indicators{
+}
+
+
+.movimiento{
+    opacity:0;
+    
+}
+
+.movimiento2{
+    opacity:0;
+    
+}
+
+.movimiento3{
+    opacity:0;
+    
+}
+
+
+
+/* ESTILOS BOTONES */
 
 
 .btnRegistrarse{
@@ -86,30 +172,20 @@ background-color: #9d9d97 !important;
 border-color: #9d9d97 !important;
 }
 
-.carousel-inner {
-    height: 100%;
-}
-
-/* Background images are set within the HTML using inline CSS, not here */
 
 
-.carousel-indicators{
-}
 
-p{
-    color: #9d9d97;
-    font-size: 1.5em;
-}
-
-h2{
-
-    font-size: 30px;
-    color: white;
-
+.btnFormulario{
+    height: 40px !important;
+    width: 100px !important;
+    font-size: 17px !important;
+    margin-bottom: 150px;
+    padding: 0px !important;
+    border: 0;
 
 }
 
-/* BOTONES */
+
 #btnVotar{
 display: block;
 margin: 0 auto;
@@ -122,20 +198,60 @@ font-size: 2em;
 background-color: black !important;
 border-color: black !important;
 }
-/* TEXTOS */
 
-p,h2,form{
-       font-family:"FuenteFoto"; 
-       text-align: justify;
+
+
+.btnDebajoImagen{
+    height: 40px !important;
+    width: 100px !important;
+    font-size: 17px !important;
+    padding: 0px !important;
+    border: 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.btnMarginTop{
+
+    margin-top: 10px;
+}
+
+
+.btnIm{
+
+    margin: 10px !important;
+    width: 170px !important;
+    height: auto;
+}
+
+
+.btnMarginTopP{
+
+      margin-top: 10px !important;
+    width: 170px !important;
+    height: auto;
+
 
 }
+
+
+.btnLogin{
+  
+    margin-bottom: 270px !important;
+
+}
+
+
+
+
+/* TEXTOS */
+
 
 .txtFooter{
  font-size: 1em;
  padding: 0.5em;
  margin-top: 0.6em;
  color: #9d9d97;
-
 
 }
 
@@ -146,25 +262,7 @@ p,h2,form{
     color: white;
 
 }
-a{
 
-    font-size: 1.3em;
-}
-
-.movimiento{
-    opacity:0;
-    
-}
-
-.movimiento2{
-    opacity:0;
-    
-}
-
-.movimiento3{
-    opacity:0;
-    
-}
 
 
 /* ESTILOS ESTRUCTURA/COLOR*/
@@ -173,56 +271,13 @@ background-color: black !important;
 width: auto;
 }
 
-.marginTop{
-    margin-top: 6%;
-}
-
-.centrado{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;          
-}
-
-.marginTxt{
-
-    padding-right: 90px;
-}
-
-.marginTxtL{
-
-    padding-left:90px;
-}
-
-.fondoGris {
-
-    background-color:#252524 !important;
-}
 
 /* ESTILOS REGISTRAR */
 
-label{
- color: #9d9d97;
-font-size: 16px;
-font-weight:100;
-}
 
-.btnFormulario{
-    height: 40px !important;
-    width: 100px !important;
-    font-size: 17px !important;
-    margin-bottom: 150px;
-    padding: 0px !important;
-    border: 0;
-
-}
 
 /* ESTILOS LOGIN */
 
-.btnLogin{
-  
-    margin-bottom: 270px !important;
-
-}
 
 /* PANEL CONTROL */
 
@@ -260,17 +315,6 @@ color: #9d9d97 !important;
 
 color: #9d9d97 !important;
 
-}
-
-a {
-    color: #9d9d97;
-    text-decoration: none;
-}
-
-
-a:hover{
-    color: black;
-    text-decoration: none;
 }
 
 
@@ -331,10 +375,10 @@ color: #9d9d97 !important;
 
 
     background-image: url('../image/btn/BtnUrbano.png') !important;
-   background-repeat: no-repeat;
-  height: 184px;
-  width: 190px;
-   background-color: Transparent;
+    background-repeat: no-repeat;
+    height: 184px;
+    width: 190px;
+    background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
     cursor:pointer;
@@ -373,60 +417,13 @@ color: #9d9d97 !important;
 
 }
 
-.btnDebajoImagen{
-    height: 40px !important;
-    width: 100px !important;
-    font-size: 17px !important;
-    padding: 0px !important;
-    border: 0;
-    margin-top: 5px;
-    margin-bottom: 15px;
-}
+.imgVotacion{
 
-.btnMarginTop{
-
-    margin-top: 10px;
+    min-height: 210px;
+    width: auto;
 }
 
 
-.btnIm{
-
-    margin: 10px !important;
-    width: 170px !important;
-    height: auto;
-}
 
 
-.btnMarginTopP{
 
-      margin-top: 10px !important;
-    width: 170px !important;
-    height: auto;
-
-
-}
-
-span{
-
-    font-size: 16px;
-}
-
-
-a{
-
-    font-size: 16px;
-}
-
-.hide-bullets {
-    list-style:none;
-    margin-left: -40px;
-    margin-top:20px;
-}
-
-.thumbnail {
-    padding: 0;
-}
-
-.carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    width: 100%;
-}

@@ -65,10 +65,10 @@
 
     <div class="container-fluid nomarggin">
     	<div class="row nomarggin" >
-    		<div class="col-md-6 nomarggin centrado">
+    		<div class="col-md-6 col-xs-6 nomarggin centrado">
     			<img class="img-responsive nomarggin" src="image/participa.jpg">
     		</div>
-    			<div class="col-md-5 nomarggin">
+    			<div class="col-md-5 col-xs-5 nomarggin">
 				<h2>Participa</h2>
 				<p>Si quieres participar es muy sencillo, sube tu fotografía, puedes participar en las categorias de naturaleza, urbano y artística, recibe votaciones.Las tres fotografías con más votaciones tendrán grandes recompensas.Para ello solo tienes que registrarte en el siguiente enlace</p>
     			<a href="{{url('auth/register')}}" class="btn btn-primary btn-lg active btnRegistrarse" role="button">Registrarse</a>
@@ -97,10 +97,10 @@
     <div class="container-fluid nomarggin">
     	<div class="row nomarggin movimiento" >
     	<!--<div class="col-md-1 "></div>-->
-    	<div class="col-md-6  centrado" >
+    	<div class="col-md-6  col-xs-6 centrado" >
     		<img class="img-responsive nomarggin" src="image/urbano.png">
     		</div>
-    			<div class="col-md-6 marginTxt">
+    			<div class="col-md-6 col-xs-6 marginTxt">
 				<h2>Urbano</h2>
 				<p>Este campo de la fotografía goza de una gran ventaja. La ventaja de tener un mismo escenario en el que cada día, cada minuto transcurre una escena diferente. En la ciudad nunca nada es igual, cada instante ocurren miles de cosas, la calle se llena de momentos únicos e irrepetibles que nosotros podemos cazar.</p>
     			
@@ -119,11 +119,11 @@
 
      <div class="container-fluid nomarggin">
     	<div class="row nomarggin movimiento2" >
-   			<div class=" col-md-6 marginTxtL">
+   			<div class=" col-md-6 col-xs-6 marginTxtL">
 				<h2>Naturaleza</h2>
 				<p>La fotografía de naturaleza es una modalidad del amplio tema fotográfico que trata de enmarcar en el papel la grandiosidad de los paisajes, la fauna, la flora y los pequeños detalles. La fotografía de la naturaleza tiende a centrar su atención en la captación de aspectos estéticos, muy por encima de otros tipos de fotografía.</p> 			
     		</div>
-    		  	<div class="col-md-6 nomarggin centrado">
+    		  	<div class="col-md-6 col-xs-6 nomarggin centrado">
     			<img class="img-responsive nomarggin" src="image/naturaleza.png">
     		</div>
     		
@@ -132,7 +132,7 @@
 
     <div class="container-fluid nomarggin">
 	<div class="row nomarggin">
-		<div class="col-md-12 nomarggin">
+		<div class="col-md-12 col-xs-12 nomarggin">
 		<img class="img-responsive nomarggin" src="image/fotografiaArtistica.jpg"></img>
 		</div>	
 	</div>
@@ -140,10 +140,10 @@
 
  <div class="container-fluid nomarggin">
     	<div class="row nomarggin movimiento3" >
-    	<div class="col-md-6  centrado">
+    	<div class="col-md-6  col-xs-6 centrado">
     			<img class="img-responsive nomarggin" src="image/artistico.png">
     		</div>
-    			<div class=" col-md-6 marginTxt">
+    			<div class=" col-md-6 col-xs-6 marginTxt">
 				<h2>Artistico</h2>
 				<p>La fotografía artística integra los componentes de una obra de arte. Tratar de definirlos sería muy complejo para un espacio tan reducido, pero se puede categorizar a dos categorías principales: el dominio técnico y su contenido.</p>
     			
