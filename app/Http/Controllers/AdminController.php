@@ -26,11 +26,7 @@ class AdminController extends Controller
 Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 */
       public function mostrarAdmin(){
-        if (Auth::user()->isAdmin()){
             return View('admin.admin');
-        } else{
-            return redirect()->back();
-        }
     }
 
     public function devuelveCategorias(){
@@ -42,7 +38,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
     public function devuelveFotos(){
 
-        $fotos=Foto::paginate(2);
+        $fotos=Foto::paginate(10);
 
        return View('admin.adminFotos',compact('fotos'));
 
@@ -65,7 +61,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
      public function gestionarFotos(Request $request){
 
-        $fotos_checkeadas=$request->input('fotos');
+        /*$fotos_checkeadas=$request->input('fotos');
         if(is_array($fotos_checkeadas)){
 
             foreach($fotos_checkeadas as $nombreFoto){
@@ -75,6 +71,14 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
         return redirect("adminFotos")
         ->with("mensaje", "Fotos modificadas correctamente");
         }
+*/
+        $foto=Foto::where('nombreArchivo',$request->input('btnCambiar'))->first();
+
+        $foto->setContrario();
+        
+        return redirect("adminFotos")
+        ->with("mensaje","Fotos modificada correctamente");
+
 
     }
 
