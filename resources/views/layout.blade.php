@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/magic.css')}}">
     <link rel="stylesheet" href="{{asset('css/cssPersonalizado.css')}}">
+    @yield('linkCss')
+
 
 	<!-- link JQUERY -->
     <script src="{{ URL::asset('js/jquery.js') }}"></script>

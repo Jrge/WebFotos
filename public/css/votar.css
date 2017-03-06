@@ -1,0 +1,46 @@
+.margenCategorias{
+	margin-top: -30px !important;
+	margin-right: 40px !important;
+}
+
+.imgMargenBotton{
+
+	margin-bottom: 30px;
+}
+
+.txtVotaciones{
+	padding: 0 !important;
+	font-size: 1.5vw !important;
+	color: white;
+	margin-top: 5px;
+	text-align: right;
+
+}
+
+.btnVotar{
+    background-image: url('../image/votar/votarBtn.png') !important;
+    background-repeat: no-repeat;
+    height:45px;
+    width: 120px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    margin-bottom: 1em;
+    margin-left: -1em;
+}
+
+
+
+.btnVotar:hover{
+    background-image: url('../image/votar/votarBtnHover.png') !important;
+
+}
+
+.imgFondoMiniatura{
+
+	background-color: #20201f;
+	border: none;
+}
