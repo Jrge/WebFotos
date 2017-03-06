@@ -46,8 +46,6 @@ class VotoController extends Controller
 
         }
     }
-
-
     public function getVotar(){
         $categorias=Categoria::get();
         return view('votar')

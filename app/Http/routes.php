@@ -30,21 +30,23 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 Route::get('user', 'UserController@user');
 
-//Imagenes
-//Route::get('user', 'UserController@profile');
+
 Route::post('user', 'UserController@subirImagen');
 
 /* 
 	Si el usuario es administrador mostramos una vista de lo contrario lo 
-	expulsamos redireccionándolo de dónde vino.(ver metodo isadmin en AdminController)
-
+	expulsamos redireccionándolo a la página raiz.
 */
 
-Route::post('adminCategorias','AdminController@gestionarCategorias');
-Route::post('adminFotos', 'AdminController@gestionarFotos');
-Route::post('adminAdministradores', 'AdminController@gestionarUsuarios');
 
-Route::get('admin', 'AdminController@mostrarAdmin');
-Route::get('adminCategorias','AdminController@devuelveCategorias');
-Route::get('adminFotos', 'AdminController@devuelveFotos');
-Route::get('adminAdministradores', 'AdminController@devuelveUsuarios');
+
+Route::group(['middleware' =>  ['auth', 'isAdmin']], function() {
+  	Route::post('adminCategorias','AdminController@gestionarCategorias');
+	Route::post('adminFotos', 'AdminController@gestionarFotos');
+	Route::post('adminAdministradores', 'AdminController@gestionarUsuarios');
+
+	Route::get('admin', 'AdminController@mostrarAdmin');
+	Route::get('adminCategorias','AdminController@devuelveCategorias');
+	Route::get('adminFotos', 'AdminController@devuelveFotos');
+	Route::get('adminAdministradores', 'AdminController@devuelveUsuarios');  
+});
