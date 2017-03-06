@@ -31,7 +31,14 @@
             <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}" />
         @else
             <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}" checked="true"/>
-        @endif   
+        @endif
+
+            <label for="oculta">Oculta: </label>
+        @if($foto->visible==0)
+            <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}"  checked="true" />
+        @else
+            <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}"/>
+        @endif    
 
 
         <button type="submit" name="btnGuardar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnIm">Guardar Cambios</button>     
