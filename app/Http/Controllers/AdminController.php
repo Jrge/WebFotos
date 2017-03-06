@@ -10,6 +10,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Categoria;
 use App\Models\Foto;
+use App\Http\Requests\CrearCategoriasRequest;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
