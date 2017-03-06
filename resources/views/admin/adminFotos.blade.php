@@ -28,23 +28,12 @@
             <form method='post' action='{{url("adminFotos")}}' enctype='multipart/form-data'>{{csrf_field()}}
              <label for="visible">Visible: </label>
         @if($foto->visible==0)
-            <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}" />
+            <button type="submit" name="btnCambiar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnIm" value="{{$foto->nombreArchivo}}">Poner Visible</button>   
         @else
-            <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}" checked="true"/>
+            <button type="submit" name="btnCambiar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnIm" value="{{$foto->nombreArchivo}}" >Ocultar</button>   
         @endif
 
-            <label for="oculta">Oculta: </label>
-        @if($foto->visible==0)
-            <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}"  checked="true" />
-        @else
-            <input type="checkbox" name="fotos[]" value="{{$foto->nombreArchivo}}"/>
-        @endif    
-
-
-        <button type="submit" name="btnGuardar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnIm">Guardar Cambios</button>     
-     
             </form>
-
             </td>
           </tr>
           @endforeach
