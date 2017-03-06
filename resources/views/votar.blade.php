@@ -1,4 +1,9 @@
 @extends('layout')
+
+@section('linkCss')
+<link rel="stylesheet" href="{{asset('css/votar.css')}}">
+@endsection
+
 @section('content')
 @if (Session::has('status'))
 <hr />
@@ -13,7 +18,7 @@
     {{csrf_field()}}
 
      <div class="col-md-12 nomarggin">
-        <img class="img-responsive" src="image/votar/votar.jpg">
+        <img class="img-responsive imgMargenBotton" src="image/votar/votar.jpg">
     </div>
 
     </div>
@@ -21,10 +26,10 @@
 
 
 <div class="row ">
-        <div class="col-md-2">
+        <div class="col-md-2 margenCategorias">
         @foreach ($categorias as $categoria)
             <h1 class="tituloCategorias center-block">{{$categoria->Titulo}}</h1>
-            <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class='center-block {{$categoria->Titulo}} sintitulo'></button>
+            <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class=' center-block {{$categoria->Titulo}} sintitulo '></button>
         @endforeach  
     </div>
 
@@ -35,15 +40,15 @@
       <div class="col-md-3">
       <a href="#" class="pop">
  
-      <img id="{{$foto->idFoto}}" class="thumbnail img-responsive imgVotacion" src="fotografias/{{$foto->nombreArchivo }}"/> 
+      <img id="{{$foto->idFoto}}" class="thumbnail img-responsive imgVotacion imgFondoMiniatura" src="fotografias/{{$foto->nombreArchivo }}"/> 
  </a>
        <div class="col-md-6">
 
-      <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class='btn-primary btn-lg active btnDebajoImagen btnRegistrarse'>Votar</button> 
+      <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class=' btnVotar'></button> 
       </div>
              <div class="col-md-6">
 
-      <h1>{{$foto->votos}}</h1>
+      <h1 class="txtVotaciones">Votos {{$foto->votos}}</h1>
       </div>
     </div>
    @endforeach   
