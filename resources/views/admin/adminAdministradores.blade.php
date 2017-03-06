@@ -22,7 +22,7 @@
 
 	        <td>
 	         <form method='post' action='{{url("adminAdministradores")}}' enctype='multipart/form-data'>{{csrf_field()}}
-			<button type="submit"  name="promocionar" value="{{$lista->id}}" class="btn-primary btn-lg active ">Promocionar</button>
+			<button type="submit"  name="promocionar" value="{{$lista->id}}" class="btnTabla">Promocionar</button>
 			</form>
 
 	        </td>

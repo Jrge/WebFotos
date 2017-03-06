@@ -1,4 +1,5 @@
 @extends('admin.layoutadmin')
+
 @section('contenidoAdmin')
 
 @if (Session::has('mensaje'))
@@ -13,7 +14,6 @@
             <th>Fotografia</th>
             <th>Titulo</th>
             <th>Visible</th>
-            <th>Autor</th>
 
           </tr>
             @foreach ($fotos as $foto)
@@ -23,14 +23,12 @@
             </td>
             <td>{{$foto->Titulo}}</td>
             <td>{{$foto->visible}}</td>
-            <td>Nombre Autor</td>
             <td>
             <form method='post' action='{{url("adminFotos")}}' enctype='multipart/form-data'>{{csrf_field()}}
-             <label for="visible">Visible: </label>
         @if($foto->visible==0)
-            <button type="submit" name="btnCambiar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnIm" value="{{$foto->nombreArchivo}}">Poner Visible</button>   
+            <button type="submit" name="btnCambiar" class="btnTabla" value="{{$foto->nombreArchivo}}">Poner Visible</button>   
         @else
-            <button type="submit" name="btnCambiar" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnIm" value="{{$foto->nombreArchivo}}" >Ocultar</button>   
+            <button type="submit" name="btnCambiar" class="btnTabla" value="{{$foto->nombreArchivo}}" >Ocultar</button>   
         @endif
 
             </form>

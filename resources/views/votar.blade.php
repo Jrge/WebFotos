@@ -26,36 +26,49 @@
 
 
 <div class="row ">
-        <div class="col-md-2 margenCategorias">
+        <div class="col-md-2 col-xs-2 margenCategorias">
         @foreach ($categorias as $categoria)
             <h1 class="tituloCategorias center-block">{{$categoria->Titulo}}</h1>
             <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class=' center-block {{$categoria->Titulo}} sintitulo '></button>
-        @endforeach  
+        @endforeach 
+
+
     </div>
 
 
 
 @if (Session::has('fotos'))
+
     @foreach (Session::get('fotos') as $foto)
-      <div class="col-md-3">
+
+      <div class="col-md-3 col-sm-3 ">
       <a href="#" class="pop">
  
       <img id="{{$foto->idFoto}}" class="thumbnail img-responsive imgVotacion imgFondoMiniatura" src="fotografias/{{$foto->nombreArchivo }}"/> 
  </a>
-       <div class="col-md-6">
+       <div class="col-md-6 col-sm-6">
 
       <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class=' btnVotar'></button> 
       </div>
-             <div class="col-md-6">
+             <div class="col-md-6 col-sm-6">
 
       <h1 class="txtVotaciones">Votos {{$foto->votos}}</h1>
       </div>
+
     </div>
    @endforeach   
+    <div class="col-md-6">
+                {!! Session::get('fotos')->render() !!}
+      </div>
 
-   
+
 
 @endif
+
+
+
+
+
 
     </div>
 </div>

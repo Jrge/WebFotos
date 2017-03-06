@@ -1,4 +1,7 @@
 @extends('layout')
+@section('linkCss')
+<link rel="stylesheet" href="{{asset('css/admin.css')}}">
+@endsection
 @section('content')
 
 <div class="container-fluid nomarggin">

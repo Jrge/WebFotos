@@ -38,7 +38,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
     public function devuelveFotos(){
 
-        $fotos=Foto::paginate(10);
+        $fotos=Foto::paginate(4);
 
        return View('admin.adminFotos',compact('fotos'));
 

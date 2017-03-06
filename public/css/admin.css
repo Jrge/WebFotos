@@ -1,0 +1,30 @@
+
+/*----BOTON TABLA ---*/
+
+.btnTabla{
+
+	margin: 0px;
+	height: 40px !important;
+    width: 130px !important;
+    font-size: 17px !important;
+    padding: 0px !important;
+    border-radius: 10px;
+    border: 0;
+    background-color: #9d9d97 !important;
+}
+
+
+.btnTabla:hover{
+
+    background-color:#252524 !important;
+    color: white !important;
+}
+
+
+td{
+
+background-color: white;
+border:5px;
+}
+
+

@@ -42,6 +42,8 @@ class VotoController extends Controller
                         ->where('visible',true)
                         ->get();
 
+            $fotos=Foto::paginate(4);
+
             return redirect('votar')->with('fotos',$fotos);      
 
         }
