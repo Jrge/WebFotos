@@ -27,9 +27,6 @@ class UserController extends Controller{
         return View('user');
     }
 
-
-
-	//Copy paste habria k editarlo 
 	public function subirImagen(SubirImagenRequest $request){
             $name = str_random(30) . '-' . $request->file('image')->getClientOriginalName();
             $request->file('image')->move('fotografias', $name);
@@ -38,7 +35,7 @@ class UserController extends Controller{
             $categoria=Categoria::where('Titulo',$select)->first();
 
             $foto = new Foto;
-            $foto->subirImagen($categoria->idCategoria, Auth::user()->id, $request->titulo, $request->descripcion, $name);
+            $foto->subirImagen($categoria->idCategoria, Auth::user()->id, $request, $name);
             return redirect('user')->with('status', 'Su imagen en la categoria '.$foto->idCategoria. ' ha sido subida con exito');               
 
         }

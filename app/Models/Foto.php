@@ -14,11 +14,11 @@ class Foto extends Model
     protected $hidden = ['remember_token'];
 
 
-    public function subirImagen($idCategoria, $idParticipante, $titulo, $descripcion, $nombreArchivo){
+    public function subirImagen($idCategoria, $idParticipante, $request, $nombreArchivo){
         $this->idCategoria=$idCategoria;
         $this->idParticipante=$idParticipante;
-        $this->titulo=$titulo;
-        $this->descripcion=$descripcion;
+        $this->titulo=$request->titulo;
+        $this->descripcion=$request->descripcion;
         $this->nombreArchivo=$nombreArchivo;
         $this->save();
     }
