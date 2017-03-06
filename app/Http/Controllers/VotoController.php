@@ -12,6 +12,8 @@ use App\Models\Categoria;
 
 use Input;
 
+use Carbon\Carbon;
+
 
 class VotoController extends Controller
 {
@@ -21,15 +23,18 @@ class VotoController extends Controller
         if($request->exists('btnVotar')){ //SI SE HA PULSADO EL BOTON DE VOTAR SOBRE UNA IMAGEN..
             $nombreArchivo=Input::get('btnVotar');
             $foto=Foto::where('nombreArchivo',$nombreArchivo)->first();
-            $foto->votos++;
-            $foto->save();
-            $ip=$request->ip();
-            $voto=new Votacion;
-            $voto->ip=$ip;
-            $voto->idFoto=$foto->idFoto;
-            $voto->save();
-            return redirect('votar')->with('status', 'Su voto ha sido contabilizado, la imagen cuenta con '.$foto->votos.' votos');   
-        
+            $voto=Votacion::where('ip',$request->ip())->orderBy('created_at', 'DESC')->first(); 
+            if($voto==null || ($voto!=null && $voto->posibleVotar())){
+                $nuevoVoto=new Votacion;
+                $nuevoVoto->votar($foto->idFoto,$request);
+                $foto->aumentarVoto();
+
+                return redirect('votar')->with('status', 'Su voto ha sido contabilizado, la imagen cuenta con '.$foto->votos.' votos');  
+            }else{
+
+                
+                return redirect('votar')->with('status', 'Solo se permite un voto cada 24 horas.');  
+                }
         }else{ //SI NO SE MUESTRAN LAS FOTOS DE LA CATEGORIA SELECCIONADA EN getVotar
             $categoria=Input::get('selectCategoria');
 
@@ -45,7 +50,8 @@ class VotoController extends Controller
 
     public function getVotar(){
         $categorias=Categoria::get();
-        return view('votar')->with('categorias',$categorias);
+        return view('votar')
+        ->with('categorias',$categorias);
     }
 
 

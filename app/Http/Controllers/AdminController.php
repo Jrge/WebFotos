@@ -78,8 +78,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
             foreach($fotos_checkeadas as $nombreFoto){
             $foto=Foto::where('nombreArchivo',$nombreFoto)->first();
-            $foto->visible=true;
-              $foto->save();
+            $foto->ponerVisible();
             }
         return redirect("adminFotos")
         ->with("mensaje", "Fotos modificadas correctamente");
@@ -93,13 +92,12 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             //$claseError="alert alert-danger";
             $idUsuario = $request->input('promocionar');
             $usuario=User::find($idUsuario);
-            if($usuario!=null && $usuario->admin<1){
-                $usuario->admin=true;
-                $usuario->save();             
+            if($usuario!=null && !$usuario->isAdmin()){
+                $usuario->promoAdmin();            
                 return redirect("adminAdministradores")
                 //->with("claseMsg","alert alert-success")             
                 ->with("mensaje", "Usuario promocionado correctamente.");
-            }elseif($usuario!=null && $usuario->admin>=1){
+            }elseif($usuario!=null && $usuario->isAdmin()){
                 return redirect("adminAdministradores")
                 ->with("mensaje", "Este usuario ya es Administrador")
                 //->with("claseMsg","alert alert-danger")
