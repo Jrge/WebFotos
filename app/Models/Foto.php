@@ -9,7 +9,7 @@ class Foto extends Model
     protected $primaryKey = 'idFoto';
 
 
-    protected $fillable = ['idCategoria', 'idParticipante','Titulo','descripcion','nombreArchivo','votos'];
+    protected $fillable = ['idCategoria', 'idParticipante','Titulo','descripcion','nombreArchivo','votos','visible'];
 
     protected $hidden = ['remember_token'];
 
@@ -36,26 +36,15 @@ class Foto extends Model
 
 
     public function setContrario(){
-        switch($this->comprobarVisible())
-        {
-            case false:
-                $this->visible=1;
-                $this->save();
-                break;
-            case true:
+
+            if($this->visible>0){
                 $this->visible=0;
                 $this->save();
-                break;
+
+            }else{
+                $this->visible=1;
+                $this->save();
+            }
         }
 
-    }
-
-
-    public function comprobarVisible(){
-        if($this->visible=true){
-            return 1;
-        }else{
-            return 0;
-        }
-    }
 }

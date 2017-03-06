@@ -74,8 +74,14 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 */
         $foto=Foto::where('nombreArchivo',$request->input('btnCambiar'))->first();
 
-        $foto->setContrario();
-        
+            if($foto->visible>0){
+                $foto->visible=0;
+                $foto->save();
+            }else{
+                $foto->visible=1;
+                $foto->save();
+            }
+
         return redirect("adminFotos")
         ->with("mensaje","Fotos modificada correctamente");
 
