@@ -37,13 +37,11 @@ class VotoController extends Controller
                 }
         }else{ //SI NO SE MUESTRAN LAS FOTOS DE LA CATEGORIA SELECCIONADA EN getVotar
             $categoria=Input::get('selectCategoria');
-
             $fotos=Foto::where('idCategoria',$categoria)
-                        ->where('visible',true)
-                        ->get();
-
-            $fotos=Foto::paginate(4);
-
+                        ->where('visible',1)
+                        ->paginate(4);
+        
+            
             return redirect('votar')->with('fotos',$fotos);      
 
         }
