@@ -2,7 +2,30 @@
 
 @section('linkCss')
 <link rel="stylesheet" href="{{asset('css/votar.css')}}">
+<link rel="stylesheet" href="{{asset('css/lg-fb-comment-box.css')}}">
+
+
+<link rel="stylesheet" href="{{asset('css/lightgallery.css')}}">
+
+
 @endsection
+
+
+@section('linkJs')
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+<!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
+<script src="{{ URL::asset('js/jquery.mousewheel.min.js') }}"></script>
+
+
+<script src="{{ URL::asset('js/lightgallery.min.js') }}"></script>
+
+<!-- lightgallery plugins -->
+<script src="{{ URL::asset('js/lg-thumbnail.min.js') }}"></script>
+<script src="{{ URL::asset('js/lg-fullscreen.min.js') }}"></script>
+@endsection
+
 
 @section('content')
 @if (Session::has('status'))
@@ -12,7 +35,9 @@
 </div>
 <hr />
 @endif
- <div class="container-fluid nomarggin">
+
+
+ <div class="container-fluid nomarggin" >
     <div class="row nomarggin" >
     <form method='post' action='{{url("votar")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
@@ -26,46 +51,47 @@
 
 
 <div class="row ">
-        <div class="col-md-2 col-xs-2 margenCategorias">
+        <div class="col-md-2 col-xs-2 margenCategorias" >
         @foreach ($categorias as $categoria)
             <h1 class="tituloCategorias center-block">{{$categoria->Titulo}}</h1>
             <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class=' center-block {{$categoria->Titulo}} sintitulo '></button>
         @endforeach 
-
-
     </div>
 
 
 
 @if (Session::has('fotos'))
+      <div  id="selector1">
+  @foreach (Session::get('fotos') as $foto)
+<form method="post" action="{{url('votar')}}" >{!! csrf_field() !!}
 
-    @foreach (Session::get('fotos') as $foto)
+    </form>
+<div class="col-md-3 col-sm-3">
 
-      <div class="col-md-3 col-sm-3 ">
-      <a href="#" class="pop">
- 
-      <img id="{{$foto->idFoto}}" class="thumbnail img-responsive imgVotacion imgFondoMiniatura" src="fotografias/{{$foto->nombreArchivo }}"/> 
- </a>
-       <div class="col-md-6 col-sm-6">
+  <div class="item" data-src="fotografias/{{$foto->nombreArchivo }}"  data-sub-html="#con{{$foto->idFoto}}">
+    <img class="img-responsive" src="fotografias/{{$foto->nombreArchivo }}"/> 
+  </div>
 
-      <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class=' btnVotar'></button> 
-      </div>
-             <div class="col-md-6 col-sm-6">
+ <div id="con{{$foto->idFoto}}" class="row">
+    <form method="post" action="{{url('votar')}}" >{!! csrf_field() !!}
+      <button type='submit' name='btnVotar' value="{{$foto->nombreArchivo}}" class=' btnVotar col-md-6'></button> 
+      <h1 class="txtVotaciones col-md-6">Votos {{$foto->votos}}</h1>
+    </form>
+  </div>
+        
 
-      <h1 class="txtVotaciones">Votos {{$foto->votos}}</h1>
-      </div>
 
-    </div>
+</div>
+
+
+
+
+
    @endforeach   
-    <div class="col-md-6">
-                {!! Session::get('fotos')->render() !!}
-      </div>
-
+     </div><!--fin id Selector-->
 
 
 @endif
-
-
 
 
 
@@ -80,28 +106,19 @@
 
 
 
-<!-- Creates the bootstrap modal where the image will appear -->
-<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      </div>
-      <div class="modal-body">
-        <img src="" id="imagepreview" style="max-width:560px; height:auto;" >
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script type="text/javascript">
-$(".pop").on("click", function() {
-   $('#imagepreview').attr('src', $(this).find("img").attr("src")); // here asign the image to the modal when the user click the enlarge link
-   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
-});
 
-</script>	
+
+
+    $('#selector1').lightGallery({
+        selector: '.item'
+
+    });
+
+
+
+
+</script>
+
+
 @endsection

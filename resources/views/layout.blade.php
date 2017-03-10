@@ -17,8 +17,8 @@
     <script src="{{ URL::asset('js/jquery.waypoints.js') }}"></script>
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
 
-     <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>
-  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"> </script>
+    @yield('linkJs')
+
 
 </head>
 @show

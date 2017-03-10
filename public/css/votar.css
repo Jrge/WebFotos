@@ -12,8 +12,9 @@
 	padding: 0 !important;
 	font-size: 1.5em !important;
 	color: white;
-	margin-top: 5px;
-	text-align: right;
+	text-align: center;
+        margin-top: 0.5em;
+
 
 }
 
@@ -28,8 +29,9 @@
     cursor:pointer;
     overflow: hidden;
     outline:none;
-    margin-bottom: 1em;
-    margin-left: -1em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+
 }
 
 
@@ -62,3 +64,6 @@
 }
 
 
+.prueba{
+pointer-events: none;
+}
