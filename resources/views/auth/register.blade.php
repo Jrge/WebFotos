@@ -46,10 +46,10 @@
 
 
                 <div class="form-group">
-                <label for="alumno_tutor">Alumno/Tutor</label>
+                <label for="alumno_tutor">Soy:</label>
                 <select class="form-control">
-                  <option value="Alumno" name="Alumno">Alumno</option>
-                  <option value="Tutor" name="Tutor">Tutor</option>
+                  <option value="alumno" name="alumno">Alumno/Alumna</option>
+                  <option value="tutor" name="tutor">Padre/Madre</option>
                 </select>
                 </div>
 
