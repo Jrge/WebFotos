@@ -45,7 +45,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
     }
 
     public function devuelveUsuarios(){
-    $listaUsuarios = User::paginate(2);
+    $listaUsuarios = User::paginate(1);
        return View('admin.adminAdministradores',compact('listaUsuarios'));
 
     }
