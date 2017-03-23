@@ -30,8 +30,9 @@
                    <div class="text-danger">{{$errors->first('password')}}</div>
                   </div>
                       <div class="form-group">
-                       <label for="remember">No cerrar sesión:</label>
                        <input type="checkbox" name="remember" />
+                       <label for="remember">No cerrar sesión:</label>
+
                       </div>
                   <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin">Enviar</button>
                  </form>

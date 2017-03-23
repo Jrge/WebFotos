@@ -69,6 +69,26 @@ a:hover{
     text-decoration: none;
 }
 
+.form-group a{
+
+color: #9e1b57;
+font-weight: 500;
+text-decoration: none;
+}
+
+.form-group a:hover{
+   color: white; 
+}
+
+.modal{
+       font-family:"FuenteFoto";    
+}
+
+.modal p {
+
+    font-size: 1.2em;
+}
+
 
 
 /* ESTILOS GENERICOS */

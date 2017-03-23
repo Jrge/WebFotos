@@ -44,6 +44,22 @@
                     <input type="password" class="form-control" name="password_confirmation" />
                 </div>
 
+
+                <div class="form-group">
+                <label for="alumno_tutor">Alumno/Tutor</label>
+                <select class="form-control">
+                  <option value="Alumno" name="Alumno">Alumno</option>
+                  <option value="Tutor" name="Tutor">Tutor</option>
+                </select>
+                </div>
+
+                <div class="form-group">
+
+                   <input type="checkbox" name="aceptar">
+                   <label for="terminos">Acepto los <a data-toggle="modal" href="#myModal">Términos y condiciones de uso</a></label>
+
+                </div>
+                    
                 <div>
                     <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario">Enviar</button>
                 </div>
@@ -51,6 +67,27 @@
         </div>
     </div>
 </div>
+
+<!-- Modal -->
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Términos y condiciones de uso</h3>
+        </div>
+        <div class="modal-body">
+          <p>Texto</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
  
