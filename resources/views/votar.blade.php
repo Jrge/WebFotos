@@ -30,7 +30,7 @@
 @section('content')
 @if (Session::has('status'))
 <hr />
-<div class='text-success'>
+<div class='alert alert-info'>
     {{Session::get('status')}}
 </div>
 <hr />
