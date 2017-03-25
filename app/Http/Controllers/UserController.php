@@ -7,7 +7,7 @@ use App\Models\Categoria;
 use App\Models\Foto;
 use Validator;
 use Auth;
-use App\User;
+use App\Models\User;
 use App\Http\Requests\SubirImagenRequest;
 
 use Input;
