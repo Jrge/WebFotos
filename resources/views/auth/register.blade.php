@@ -46,8 +46,8 @@
 
 
                 <div class="form-group">
-                <label for="alumno_tutor">Soy:</label>
-                <select class="form-control">
+                <label for="categoria">Soy:</label>
+                <select class="form-control" name="categoria">
                   <option value="alumno" name="alumno">Alumno/Alumna</option>
                   <option value="tutor" name="tutor">Padre/Madre</option>
                 </select>
@@ -57,7 +57,7 @@
 
                    <input type="checkbox" name="aceptar">
                    <label for="terminos">Acepto los <a data-toggle="modal" href="#myModal">Términos y condiciones de uso</a></label>
-
+                    <div class="text-danger">{{$errors->first('aceptar')}}</div>
                 </div>
                     
                 <div>

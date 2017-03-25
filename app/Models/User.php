@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 
 use Illuminate\Auth\Authenticatable;
@@ -21,7 +21,7 @@ class User extends Model implements AuthenticatableContract,
 
     protected $table = 'users';
 
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['name', 'email', 'password','categoria'];
 
     protected $hidden = ['password', 'remember_token'];
 
@@ -33,6 +33,14 @@ class User extends Model implements AuthenticatableContract,
 
     public function promoAdmin(){
         $this->admin=true;
+        $this->save();
+    }
+
+    public function addUsuario($request){
+        $this->name = $request->name;
+        $this->email = $request->email;
+        $this->password = bcrypt($request->password);
+        $this->categoria = $request->categoria;
         $this->save();
     }
 }
