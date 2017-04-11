@@ -43,6 +43,15 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
     }
 
+    //METODO POST DE LISTADO FOTOS
+     public function devuelvelistadoFotos(Request $request){
+
+       
+        return View('admin.adminListadoFotografias');
+
+
+    }
+
     public function devuelveFotos(){
 
         $fotos=Foto::paginate(4);

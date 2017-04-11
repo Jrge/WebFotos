@@ -29,7 +29,7 @@
 </div>
 
 <div class="col-md-4">
- <form method="POST" action="{{url('auth/register')}}">
+ <form method="POST" action="{{url('adminListadoFotografias')}}">
    {!! csrf_field() !!}
     <div class="form-group">
      <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnFiltrar">Filtrar</button>
