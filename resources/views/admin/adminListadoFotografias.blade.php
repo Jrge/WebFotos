@@ -3,34 +3,34 @@
 <link rel="stylesheet" href="{{asset('css/listadoFotos.css')}}">
 @endsection
 @section('contenidoAdmin')
+{!!Form::model(Request::all(), [ 'method' => 'POST' ]) !!}
 <div class="col-md-4">
- <form method="POST" action="{{url('adminListadoFotografias')}}">
-   {!! csrf_field() !!}
     <div class="form-group">
     <label for="categoria">Tipo de usuario:</label>
-    <select class="form-control" name="categoria">
-      <option value="todos" name="todos">Todos</option>
-      <option value="alumno" name="alumno">Alumno/Alumna</option>
-      <option value="tutor" name="tutor">Padre/Madre</option>
-      <option value="profesor" name="profesor">Profesor/Profesora</option>
-    </select>
+
+    {!! Form::select('categoria', [
+    'todos' => 'Todos',
+    'alumno' => 'Alumno/Alumna',
+    'tutor' => 'Padre/Madre',
+    'profesor' => 'Profesor/Profesora']
+    ,null, ['class' =>'form-control']) !!}
+ 
     </div>
+
 </div>
 
 <div class="col-md-4">
-   {!! csrf_field() !!}
     <div class="form-group">
     <label for="categoria">Resultados</label>
-    <input type="number" name="numResultados" min="0" value="10">
+    {!! Form::number('numResultados',null,['class' =>'form-control'])!!}
     </div>
 </div>
 
 <div class="col-md-4">
-   {!! csrf_field() !!}
     <div class="form-group">
      <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnFiltrar">Filtrar</button>
     </div>
-</form>
+{!! Form::close()!!}
 </div>
 
 
@@ -61,7 +61,7 @@
 
 
   <div class="col-md-8">         
-        {!! $fotos->render() !!}
+        {!! $fotos->appends(Request::only(['categoria','numResultados']))->render() !!}
         </div>
 
 @endsection
