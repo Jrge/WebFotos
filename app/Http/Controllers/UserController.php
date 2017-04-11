@@ -35,7 +35,7 @@ class UserController extends Controller{
             $categoria=Categoria::where('Titulo',$select)->first();
 
             $foto = new Foto;
-            $foto->subirImagen($categoria->idCategoria, Auth::user()->id, $request, $name);
+            $foto->subirImagen($categoria->idCategoria, Auth::user()->id,Auth::user()->tipoParticipante, $request, $name);
             return redirect('user')->with('status', 'Su imagen en la categoria '.$foto->idCategoria. ' ha sido subida con exito');               
 
         }

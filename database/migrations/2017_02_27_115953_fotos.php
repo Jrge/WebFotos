@@ -16,6 +16,7 @@ class Fotos extends Migration
             $table->increments('idFoto')->unique();
             $table->integer('idCategoria');
             $table->integer('idParticipante');
+            $table->string('tipoParticipante');
             $table->string('Titulo');
             $table->string('descripcion');
             $table->string('nombreArchivo');

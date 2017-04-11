@@ -9,14 +9,15 @@ class Foto extends Model
     protected $primaryKey = 'idFoto';
 
 
-    protected $fillable = ['idCategoria', 'idParticipante','Titulo','descripcion','nombreArchivo','votos','visible'];
+    protected $fillable = ['idCategoria', 'idParticipante','tipoParticipante','Titulo','descripcion','nombreArchivo','votos','visible'];
 
     protected $hidden = ['remember_token'];
 
 
-    public function subirImagen($idCategoria, $idParticipante, $request, $nombreArchivo){
+    public function subirImagen($idCategoria, $idParticipante,$tipoParticipante, $request, $nombreArchivo){
         $this->idCategoria=$idCategoria;
         $this->idParticipante=$idParticipante;
+        $this->tipoParticipante=$tipoParticipante;
         $this->titulo=$request->titulo;
         $this->descripcion=$request->descripcion;
         $this->nombreArchivo=$nombreArchivo;
