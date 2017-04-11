@@ -7,16 +7,11 @@
 
 <div class="container-fluid nomarggin">
     <div class="row nomarggin" >
-        <div class="col-md-12 nomarggin">
-            <img class="img-responsive" src="image/adminpanel/panelAdmin.jpg">
-        </div>
-    </div>
-</div>
+            <div class="col-md-1"></div>
 
-<div class="container-fluid nomarggin">
-    <div class="row nomarggin" >
-        <div class="col-md-12 nomarggin">
-		<h1 class="userName">Administrador {{Auth::user()->name}}</h1>
+        <div class="col-md-11 nomarggin">
+            <img class="img-responsive" src="image/adminpanel/panelAdmin.jpg">
+            <h1 class="userName">Administrador {{Auth::user()->name}}</h1>
         </div>
     </div>
 </div>
@@ -39,8 +34,8 @@
                 </ul>
             </nav>
   		</div>
-        <div class="col-md-2"></div>
-  		<div class="col-md-6 nomarggin">
+        <div class="col-md-1"></div>
+  		<div class="col-md-7 nomarggin contenido">
 		@yield('contenidoAdmin')
 		</div>
 
