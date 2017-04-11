@@ -32,14 +32,14 @@
  <form method="POST" action="{{url('adminListadoFotografias')}}">
    {!! csrf_field() !!}
     <div class="form-group">
-     <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnLogin btnFiltrar">Filtrar</button>
+     <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnFiltrar">Filtrar</button>
     </div>
 </form>
 </div>
 
 
 <div class="row-fluid">
-<div class="col-md-6">
+<div class="col-md-12">
 
 <table class="table table-striped">
           <tr>
@@ -51,7 +51,7 @@
             @foreach ($fotos as $foto)
           <tr>
             <td>  
-            <img class="img-responsive" src="fotografias/{{$foto->nombreArchivo }}" />
+            <img class="img-responsive imgTable" src="fotografias/{{$foto->nombreArchivo }}" />
             </td>
             <td>{{$foto->votos}}</td>
             <td>{{$foto->tipoParticipante}}</td>

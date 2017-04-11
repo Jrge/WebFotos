@@ -19,7 +19,7 @@
             @foreach ($fotos as $foto)
           <tr>
             <td>  
-            <img class="img-responsive" src="fotografias/{{$foto->nombreArchivo }}" />
+            <img class="img-responsive imgTable" src="fotografias/{{$foto->nombreArchivo }}" />
             </td>
             <td>{{$foto->Titulo}}</td>
             <td>{{$foto->visible}}</td>

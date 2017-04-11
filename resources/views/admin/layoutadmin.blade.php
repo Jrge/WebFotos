@@ -1,6 +1,7 @@
 @extends('layout')
-@section('linkCss')
 <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+
+@section('linkCss')
 @endsection
 @section('content')
 
@@ -22,7 +23,7 @@
 
  <div class="container-fluid nomarggin">
     <div class="row nomarggin" >
-        <div class="col-md-2 nomarggin">
+     <div class="col-md-2 nomarggin">
 
  		<!-- Sidebar -->
 

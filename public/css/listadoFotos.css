@@ -1,6 +1,7 @@
 input[type="number"]{
+	margin-bottom: 0px !important;
 
-	height: 34px;
+height: 34px;
 padding: 6px 12px;
 font-size: 14px;
 }
@@ -24,5 +25,12 @@ input[type=number] {
 
 button{
 	margin-top:25px !important;
-	margin-bottom: 0px;
+	margin-bottom: 0px !important;
 }
+
+td{
+
+background-color: white;
+border:5px;
+}
+
