@@ -50,6 +50,7 @@
                 <select class="form-control" name="tipoUsuario">
                   <option value="alumno" name="alumno">Alumno/Alumna</option>
                   <option value="tutor" name="tutor">Padre/Madre</option>
+                  <option value="profesor" name="profesor">Profesor</option>
                 </select>
                 </div>
 
