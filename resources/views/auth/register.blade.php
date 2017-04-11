@@ -47,7 +47,7 @@
 
                 <div class="form-group">
                 <label for="categoria">Soy:</label>
-                <select class="form-control" name="tipoUsuario">
+                <select class="form-control" name="tipoParticipante">
                   <option value="alumno" name="alumno">Alumno/Alumna</option>
                   <option value="tutor" name="tutor">Padre/Madre</option>
                   <option value="profesor" name="profesor">Profesor</option>

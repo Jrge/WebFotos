@@ -21,7 +21,7 @@ class User extends Model implements AuthenticatableContract,
 
     protected $table = 'users';
 
-    protected $fillable = ['name', 'email', 'password','tipoUsuario'];
+    protected $fillable = ['name', 'email', 'password','tipoParticipante'];
 
     protected $hidden = ['password', 'remember_token'];
 
@@ -40,7 +40,7 @@ class User extends Model implements AuthenticatableContract,
         $this->name = $request->name;
         $this->email = $request->email;
         $this->password = bcrypt($request->password);
-        $this->tipoUsuario = $request->tipoUsuario;
+        $this->tipoParticipante = $request->tipoParticipante;
         $this->save();
     }
 }

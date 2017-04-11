@@ -48,4 +48,6 @@ class Foto extends Model
             }
         }
 
+
+
 }
