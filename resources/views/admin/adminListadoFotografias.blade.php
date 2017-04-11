@@ -62,4 +62,10 @@
 
 </div>
 </div>
+
+
+  <div class="col-md-8">         
+        {!! $fotos->render() !!}
+        </div>
+
 @endsection

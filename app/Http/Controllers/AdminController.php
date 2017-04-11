@@ -38,11 +38,9 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
 
      public function listadoFotos(){
-       $foto=Foto::orderBy('votos', 'DESC');
-       $foto=$foto->paginate(10);
-        dd($foto);
-        
-       return View('admin.adminListadoFotografias');
+        $fotos=Foto::orderBy('votos', 'DESC')->paginate(1); 
+
+       return View('admin.adminListadoFotografias',compact('fotos'));
 
     }
 
