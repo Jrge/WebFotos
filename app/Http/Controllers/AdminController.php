@@ -43,11 +43,19 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
        return View('admin.adminListadoFotografias',compact('fotos'));
 
     }
+    
 
     //METODO POST DE LISTADO FOTOS
      public function devuelvelistadoFotos(Request $request){
+        if($request->input('categoria')=='todos'){
+            $fotos=Foto::orderBy('votos','DESC')->paginate($request->input('numResultados'));
+        }else{
+            $fotos=Foto::where('tipoParticipante',$request->input('categoria'))->orderBy('votos','DESC')
+            ->paginate($request->input('numResultados'));
+        }
  
-        return View('admin.adminListadoFotografias');
+
+        return View('admin.adminListadoFotografias',compact('fotos'));
 
 
     }
