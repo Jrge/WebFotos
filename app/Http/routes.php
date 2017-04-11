@@ -48,5 +48,7 @@ Route::group(['middleware' =>  ['auth', 'isAdmin']], function() {
 	Route::get('admin', 'AdminController@mostrarAdmin');
 	Route::get('adminCategorias','AdminController@devuelveCategorias');
 	Route::get('adminFotos', 'AdminController@devuelveFotos');
-	Route::get('adminAdministradores', 'AdminController@devuelveUsuarios');  
+	Route::get('adminAdministradores', 'AdminController@devuelveUsuarios');
+	Route::get('adminListadoFotografias', 'AdminController@listadoFotos');  
+  
 });
