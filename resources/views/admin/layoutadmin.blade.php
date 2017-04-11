@@ -32,7 +32,9 @@
                     <li class="nav-divider"></li>
                     <li><a href="{{url('adminCategorias')}}">Generar Categorias</a></li>
                     <li><a href="{{url('adminFotos')}}">Administrar Fotos</a></li>
-                    <li><a href="{{url('adminAdministradores')}}">Crear Administradores</a></li>
+                    <li><a href="{{url('adminAdministradores')}}">Promocionar Usuarios</a></li>
+                    <li><a href="{{url('adminListadoFotografias')}}">Listado Fotograías</a></li>
+
                 </ul>
             </nav>
   		</div>
