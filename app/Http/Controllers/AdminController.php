@@ -1,6 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
+use Cache;
+
+use Closure;
+use Illuminate\View\Factory;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Container\Container;
+use Illuminate\View\Engines\EngineResolver;
+use Illuminate\Support\Contracts\ArrayableInterface as Arrayable;
+use DB;
+use Illuminate\Support\Facades\View;
+
 
 use App\Models\User;
 use Validator;
@@ -131,5 +142,55 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             }
 
     }
+
+   
+
+    public function estadisticas(){
+
+        $fotos = DB::table('fotos')->count();
+        $fotosNoV = DB::table('fotos')->where('visible', '0')->count();
+        $fotosV = DB::table('fotos')->where('visible', '1')->count();
+
+
+
+      $chartjs = app()->chartjs
+            ->name('Fotografias')
+            ->type('pie')
+            ->size(['width' => 400, 'height' => 200])
+            ->labels(['Totales', 'No visibles','Visibles'])
+            ->datasets([
+                [
+                    'backgroundColor' => ['#FF6384', '#36A2EB','#90A2EB'],
+                    'hoverBackgroundColor' => ['#FF6384', '#36A2EB'],
+                    'data' => [$fotos,  $fotosNoV, $fotosV]
+                ]
+            ])
+            ->options([]);
+
+
+        $users = DB::table('users')->count();
+        $usersA = DB::table('users')->where('tipoParticipante', 'alumno')->count();
+        $usersP = DB::table('users')->where('tipoParticipante', 'profesor')->count();
+        $usersT = DB::table('users')->where('tipoParticipante', 'tutor')->count();
+
+
+
+      $chart = app()->chartjs
+            ->name('Usuarios')
+            ->type('pie')
+            ->size(['width' => 400, 'height' => 200])
+            ->labels(['Totales', 'Alumnos/as','Profesores/as','Padre/Madre'])
+            ->datasets([
+                [
+                    'backgroundColor' => ['#FF6384', '#36A2EB','#90A2EB','#03A2EB'],
+                    'hoverBackgroundColor' => ['#FF6384', '#36A2EB'],
+                    'data' => [$users,  $usersA, $usersP, $usersT]
+                ]
+            ])
+            ->options([]);
+
+            return view('admin.estadisticas', compact('chartjs','chart'));
+
+            }
     
 }

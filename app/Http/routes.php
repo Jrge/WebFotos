@@ -46,12 +46,17 @@ Route::group(['middleware' =>  ['auth', 'isAdmin']], function() {
 	Route::post('adminAdministradores', 'AdminController@gestionarUsuarios');
 
 	Route::get('admin', 'AdminController@mostrarAdmin');
+	 Route::get('estadisticas', 'AdminController@estadisticas');
+
+
 	Route::get('adminCategorias','AdminController@devuelveCategorias');
 	Route::get('adminFotos', 'AdminController@devuelveFotos');
 	Route::get('adminAdministradores', 'AdminController@devuelveUsuarios');
 
 	Route::get('adminListadoFotografias', 'AdminController@listadoFotos');
 	Route::post('adminListadoFotografias', 'AdminController@devuelvelistadoFotos');  
- 
+
   
 });
+
+

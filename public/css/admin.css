@@ -15,7 +15,7 @@ input, label {
 }
 
 
-> .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+.active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
     z-index: 3;
     color: #fff !important;
     cursor: default;
@@ -83,9 +83,54 @@ height: auto !important;
 .contenido{
 background-color: white;
 padding: 20px !important;
-border-radius: 10px;
 margin-top: 30px !important;
 margin-bottom: 30px !important;
 
 
+}
+
+active{
+
+    background-color:#fff !important;
+
+}
+
+nav{
+text-align: center;
+margin-top: 30px !important;
+}
+
+.adminSlider  a:focus, .adminSlider a:hover,  .adminSlider a:active{
+    text-decoration: none;
+    background-color:#fff !important;
+}
+
+
+h3{
+
+    font-size: 2em;
+    float: left;
+
+}
+
+i{
+margin-top: 10px;
+font-size: 25px !important;
+padding: 10px;
+float: left;
+
+
+}
+
+
+.cabecera{
+
+text-align: center;
+border-bottom: 2px solid;
+
+}
+
+.estadis{
+
+    margin-top: 10px;
 }
