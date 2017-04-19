@@ -23,7 +23,7 @@ class VotoController extends Controller
         if($request->exists('btnVotar')){ //SI SE HA PULSADO EL BOTON DE VOTAR SOBRE UNA IMAGEN..
             $nombreArchivo=Input::get('btnVotar');
             $foto=Foto::where('nombreArchivo',$nombreArchivo)->first();
-            $voto=Votacion::where('ip',$request->ip())->orderBy('created_at', 'DESC')->first(); 
+            $voto=Votacion::where('ip',$request->ip())->where('idFoto',$foto->idFoto)->orderBy('created_at', 'DESC')->first(); 
             if($voto==null || ($voto!=null && $voto->posibleVotar())){
                 $nuevoVoto=new Votacion;
                 $nuevoVoto->votar($foto->idFoto,$request);
