@@ -4,25 +4,11 @@ $categorias=Categoria::get();
 
 ?>
 
-@extends('layout')
-@section('content')
+@extends('user.layoutUser')
+@section('contenidoUser')
 
 
-<div class="container-fluid nomarggin">
-    <div class="row nomarggin" >
-        <div class="col-md-12 nomarggin">
-            <img class="img-responsive" src="image/panelControl/categorias.jpg">
-        </div>
-    </div>
-</div>
 
-<div class="container-fluid nomarggin">
-    <div class="row nomarggin" >
-        <div class="col-md-12 nomarggin">
-		<h1 class="userName">{{Auth::user()->name}}</h1>
-        </div>
-    </div>
-</div>
 @if (Session::has('status'))
 <hr />
 <div class='text-success'>
@@ -30,16 +16,7 @@ $categorias=Categoria::get();
 </div>
 <hr />
 @endif
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4">
-<!--		
-			<img src='{{url(Auth::user()->fotografias)}}' class='img-responsive'  />
-			<h1>Ultima imagen subida</h1>
--->
-		</div >
 
-		<div class="col-md-4">
 			<h2 class="colorGrey">Subir imagen</h2>
 			<form method='post' action='{{url("user")}}' enctype='multipart/form-data'>
 				{{csrf_field()}}
@@ -79,5 +56,4 @@ $categorias=Categoria::get();
 
 
 	</div>
-</div>
 @endsection

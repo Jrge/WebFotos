@@ -43,7 +43,7 @@
       <li><a href="{{url('auth/logout')}}">Salir</a></li>
 
       @else
-     <li><a href="{{url('user')}}">{{Auth::user()->name}}</a></li>
+     <li><a href="{{url('homeUser')}}">{{Auth::user()->name}}</a></li>
      <li><a href="{{url('auth/logout')}}">Salir</a></li>
      @endif
    @else

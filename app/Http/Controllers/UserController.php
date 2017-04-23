@@ -18,13 +18,22 @@ class UserController extends Controller{
 		$this->middleware('auth'); 
 	}
 	
+
+	public function homeUser(){
+		return View('user.homeUser');
+	}
+
 	public function user(){
-		return View('user.user');
+		return View('user.homeUser');
 	}
 
 
 	public function profile(){
         return View('user');
+    }
+
+    public function vistaSubirFotos(){
+        return View('user.user');
     }
 
 	public function subirImagen(SubirImagenRequest $request){

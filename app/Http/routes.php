@@ -28,9 +28,10 @@ Route::post('auth/login', 'Auth\AuthController@postLogin');
 Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 
-Route::get('user', 'UserController@user');
 
+Route::get('homeUser','UserController@homeUser');
 
+Route::get('user', 'UserController@vistaSubirFotos');
 Route::post('user', 'UserController@subirImagen');
 
 /* 

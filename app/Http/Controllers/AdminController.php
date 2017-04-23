@@ -49,7 +49,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
 
      public function listadoFotos(){
-        $fotos=Foto::orderBy('votos', 'DESC')->paginate(1); 
+        $fotos=Foto::orderBy('votos', 'DESC')->paginate(10); 
 
        return View('admin.adminListadoFotografias',compact('fotos'));
 
@@ -73,14 +73,14 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
     public function devuelveFotos(){
 
-        $fotos=Foto::paginate(4);
+        $fotos=Foto::paginate(10);
 
        return View('admin.adminFotos',compact('fotos'));
 
     }
 
     public function devuelveUsuarios(){
-    $listaUsuarios = User::paginate(1);
+    $listaUsuarios = User::paginate(10);
        return View('admin.adminAdministradores',compact('listaUsuarios'));
 
     }

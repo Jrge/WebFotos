@@ -30,7 +30,7 @@
                     <li><a href="{{url('adminCategorias')}}">Generar Categorias</a></li>
                     <li><a href="{{url('adminFotos')}}">Administrar Fotos</a></li>
                     <li><a href="{{url('adminAdministradores')}}">Promocionar Usuarios</a></li>
-                    <li><a href="{{url('adminListadoFotografias')}}">Listado Fotografías</a></li>
+                    <li><a href="{{url('adminListadoFotografias')}}">Listado Votados</a></li>
                      <li><a href="{{url('estadisticas')}}">Estadísticas</a></li>
                    
 

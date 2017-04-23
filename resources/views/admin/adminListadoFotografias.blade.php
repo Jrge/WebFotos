@@ -22,13 +22,13 @@
 <div class="col-md-4">
     <div class="form-group">
     <label for="categoria">Resultados</label>
-    {!! Form::number('numResultados',null,['class' =>'form-control'])!!}
+    {!! Form::number('numResultados',null,['placeholder'=>'10'],['min'=>'1'],['class' =>'form-control'])!!}
     </div>
 </div>
 
 <div class="col-md-4">
     <div class="form-group">
-     <button type="submit" class="btn-primary btn-lg active btnRegistrarse btnFormulario btnFiltrar">Filtrar</button>
+     <button type="submit" class="btnTabla">Filtrar</button>
     </div>
 {!! Form::close()!!}
 </div>
