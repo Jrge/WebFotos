@@ -1,0 +1,12 @@
+.misFotos{
+
+	padding-left: 0px !important;
+}
+
+
+.miniFoto{
+
+	min-height: 200px !important;
+	max-height: 200px !important;
+	width: auto;
+}

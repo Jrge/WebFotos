@@ -27,6 +27,12 @@ class UserController extends Controller{
 		return View('user.homeUser');
 	}
 
+	public function vistaMisFotos(){
+        $fotos=Foto::get();
+        $categorias=Categoria::get();
+		return View('user.misFotos',compact('fotos', 'categorias'));
+	}
+
 
 	public function profile(){
         return View('user');

@@ -27,7 +27,7 @@
                     <li class="active"><a href="{{url('homeUser')}}">Home</a></li>
                     <li class="nav-divider"></li>
                     <li><a href="{{url('user')}}">Subir Fotos</a></li>
-                    <li><a href="{{url('user')}}">Mis Fotos</a></li>
+                    <li><a href="{{url('misFotos')}}">Mis Fotos</a></li>
 
                 </ul>
             </nav>

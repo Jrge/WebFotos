@@ -33,6 +33,8 @@ Route::get('homeUser','UserController@homeUser');
 
 Route::get('user', 'UserController@vistaSubirFotos');
 Route::post('user', 'UserController@subirImagen');
+Route::get('misFotos', 'UserController@vistaMisFotos');
+
 
 /* 
 	Si el usuario es administrador mostramos una vista de lo contrario lo 
