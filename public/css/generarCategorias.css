@@ -10,6 +10,14 @@ text-align: center;
 float: none;
 margin: 0 auto;
 width: 30%;
+font-size: 30px !important;
+
+    color: black;
+
+-webkit-transition: all 0.8s ease;
+-moz-transition: all 0.8s ease;
+-o-transition: all 0.8s ease;
+-ms-transition: all 0.8s ease;
 }
 
 .containerIcons label{
@@ -28,3 +36,58 @@ width: 30%;
 }
 
 
+
+.yellowBackground {
+	border-radius: 20px;
+    background-color:#B0A49A;
+    color: white;
+}
+
+
+
+.yellowBackground label{
+
+    color: white !important;
+}
+
+
+
+.yellowBackground i{
+    color: white !important;
+
+
+}
+
+
+
+
+
+
+
+.ContainerIconosSelect{
+position: relative;
+height: 100%;
+margin-top: 30px;
+margin-bottom: 30px;
+border-radius: 10px;
+border-style: dashed;
+ border-style: solid;
+    border-width: 5px;
+
+background: rgba(226,226,226,1);
+background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(100%, rgba(254,254,254,1)));
+background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 100%);
+background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 100%);
+background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 100%);
+background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(254,254,254,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+
+
+
+}
+
+h3{
+
+	padding: 30px !important;
+}
