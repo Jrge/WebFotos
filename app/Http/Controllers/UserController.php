@@ -48,10 +48,15 @@ class UserController extends Controller{
 
             $select = Input::get('optradio') ;
             $categoria=Categoria::where('Titulo',$select)->first();
-
-            $foto = new Foto;
-            $foto->subirImagen($categoria->idCategoria, Auth::user()->id,Auth::user()->tipoParticipante, $request, $name);
-            return redirect('user')->with('status', 'Su imagen en la categoria '.$foto->idCategoria. ' ha sido subida con exito');               
+            $usuario=Auth::user();
+            $usuario->comprobarNFotos($categoria);
+            if(($usuario->comprobarNFotos($categoria))<($categoria->limite)){
+	            $foto = new Foto;
+            	$foto->subirImagen($categoria->idCategoria, $usuario->id, $usuario->tipoParticipante, $request, $name);
+            	return redirect('user')->with('status', 'Su imagen en la categoria '.$foto->idCategoria. ' ha sido subida con exito, aun puede subir '.($categoria->limite-$usuario->comprobarNFotos($categoria)));               
+            }else{
+            	return redirect('user')->with('status', 'No ha sido posible subir la foto, ha alcanzado el número máximo de fotos para esta categoría.');  	
+            }
 
         }
 }

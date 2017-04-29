@@ -11,8 +11,6 @@ use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
-
-
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
                                     CanResetPasswordContract
@@ -42,5 +40,11 @@ class User extends Model implements AuthenticatableContract,
         $this->password = bcrypt($request->password);
         $this->tipoParticipante = $request->tipoParticipante;
         $this->save();
+    }
+
+    public function comprobarNFotos($categoria){
+        
+        $nFotos=Foto::where('idCategoria',$categoria->idCategoria)->where('idParticipante',$this->id)->count();
+        return ($nFotos);
     }
 }
