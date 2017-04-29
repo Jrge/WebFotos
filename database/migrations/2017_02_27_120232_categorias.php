@@ -16,6 +16,8 @@ class Categorias extends Migration
             $table->increments('idCategoria')->unique();
             $table->string('Titulo');
             $table->string('descripcion');
+            $table->integer('limite');
+            $table->string('icono');
             $table->rememberToken();
             $table->timestamps();
         });

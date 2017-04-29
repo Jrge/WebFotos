@@ -9,7 +9,7 @@ class Categoria extends Model
 {
 
 
-    protected $fillable = ['idCategoria','Titulo', 'descripcion'];
+    protected $fillable = ['idCategoria','Titulo', 'descripcion','limite','icono'];
 
 
     protected $hidden = ['remember_token'];
@@ -19,6 +19,8 @@ class Categoria extends Model
     {
         $this->Titulo=$request->titulo;
         $this->descripcion=$request->descripcion;
+        $this->limite=$request->limite;
+        $this->icono=$request->optradio;
         $this->save();
     }
 }
