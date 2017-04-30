@@ -28,7 +28,7 @@
 
 
 <div class="col-md-12 row-fluid">
-<h1>Selecciona un icono</h1>
+<label>Selecciona un icono</label>
 </div>
 
 
@@ -130,7 +130,7 @@
   <div class="iconCapa col-md-3">
    <label class="radio-inline">
    <input type="radio" name="optradio" value="fa fa-user"> 
-  Personas 2</label>
+  User</label>
    <i id="iconoMostrar" class="fa fa-user" aria-hidden="true"></i>
 </div>
 </div>

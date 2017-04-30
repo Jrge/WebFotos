@@ -54,7 +54,11 @@
         <div class="col-md-2 col-xs-2 margenCategorias" >
         @foreach ($categorias as $categoria)
             <h1 class="tituloCategorias center-block">{{$categoria->Titulo}}</h1>
-            <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class=' center-block {{$categoria->Titulo}} sintitulo '></button>
+
+            <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class=' center-block btnCategorias'>
+            <i id="" class="{{$categoria->icono}} iconoCategorias" aria-hidden="true"></i>
+ 
+        </button>
         @endforeach 
     </div>
 

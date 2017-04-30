@@ -55,15 +55,6 @@
                 </div>
 
 
-                <div class="form-group">
-                <label for="Iono">Elige un icono:</label>
-                <select class="form-control" name="tipoParticipante">
-                  <option value="alumno" name="alumno"><i class="fa fa-pagelines" aria-hidden="true"></i>
-Naturaleza</option>
-                
-                </select>
-                </div>
-
 
                 <div class="form-group">
 

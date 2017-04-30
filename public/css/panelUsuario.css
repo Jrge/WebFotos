@@ -6,7 +6,90 @@
 
 .miniFoto{
 
-	min-height: 200px !important;
-	max-height: 200px !important;
+	border: 5px solid #fff;
+	border-radius: 4px;
 	width: auto;
+}
+
+.barraFondo{
+
+	height: 3px;
+	width: 98% !important;
+	margin-bottom: 15px;
+
+
+	background: rgba(86,159,153,1);
+background: -moz-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(86,159,153,1)), color-stop(12%, rgba(220,220,33,1)), color-stop(31%, rgba(247,234,57,1)), color-stop(52%, rgba(220,142,26,1)), color-stop(68%, rgba(183,18,81,1)), color-stop(85%, rgba(138,30,89,1)), color-stop(100%, rgba(89,39,127,1)));
+background: -webkit-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -o-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -ms-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: linear-gradient(to right, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#569f99', endColorstr='#59277f', GradientType=1 );
+
+}
+
+
+h2 {
+    font-size: 2.5em !important;
+    color: white;
+    margin-bottom: -10px !important;
+    text-align: left !important;
+    padding: 0px !important;
+    margin-left: 0px !important;
+    	padding-left: 0px !important;
+    	color: #9d9d97 !important;
+
+}
+
+
+
+h4{
+    	color: #e8e8e8 !important;
+    	width: auto;
+float: left;
+margin-left: 10px;
+font-size: 21px !important;
+
+
+}
+
+
+.colTxtLeft{
+
+	padding-left: 0px !important;
+}
+
+
+.iconOjo{
+
+	padding-top: 0.4em;
+	padding-right: 0.8em;
+	text-align: center;
+	height: auto;
+	float: right !important;
+
+}
+
+
+
+.iconOjo:hover{
+
+		cursor:help;
+
+}
+
+
+
+
+
+.fondoImg{
+
+	background: #969696;
+border-radius: 2px;
+padding-bottom: 10px;
+overflow: hidden;
+
+border: 5px solid #ddd;
+border-radius: 4px;
 }

@@ -346,89 +346,6 @@ color: #9d9d97 !important;
 
 }
 
-.Naturaleza{
-
-
-    background-image: url('../image/btn/Btnnaturaleza.png') !important;
-   background-repeat: no-repeat;
-  height: 184px;
-  width: 190px;
-   background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-
-}
-
-
-.Naturaleza:hover{
-
-
-    background-image: url('../image/btn/BtnnaturalezaHover.png') !important;
-  
-
-}
-
-.Artístico{
-
-    background-image: url('../image/btn/BtnArtistico.png') !important;
-    background-repeat: no-repeat;
-    height: 184px;
-    width: 190px;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-
-}
-
-
-.Artístico:hover{
-    background-image: url('../image/btn/BtnArtisticoHover.png') !important;
-}
-
-.Urbano{
-
-
-    background-image: url('../image/btn/BtnUrbano.png') !important;
-    background-repeat: no-repeat;
-    height: 184px;
-    width: 190px;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-
-}
-
-
-.Urbano:hover{
-    background-image: url('../image/btn/BtnUrbanoHover.png') !important;
-}
-
-.sintitulo{
-    background-image: url('../image/btn/BtnDesconocido.png');
-    background-repeat: no-repeat;
-    height: 184px !important;
-    width: 190px !important;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-}
-
-
-.sintitulo:hover{
-    background-image: url('../image/btn/BtnDesconocidoHover.png');
-}
 
 /* CARGAR IMAGENES VOTACIONES*/
 .marginFoto{
@@ -444,6 +361,83 @@ color: #9d9d97 !important;
 }
 
 
+.btnCategorias{
+    width: 150px;
+    height: 150px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    background: #252524;
+    border-radius: 100%;
+}
 
+
+.btnCategorias:hover{
+
+    background: grey;
+}
+
+
+
+.iconoCategorias{
+
+
+    padding: 30px;
+    font-size: 80px !important;
+    border-radius: 100%;
+    
+
+
+  background: rgba(86,159,153,1);
+background: -moz-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(86,159,153,1)), color-stop(12%, rgba(220,220,33,1)), color-stop(31%, rgba(247,234,57,1)), color-stop(52%, rgba(220,142,26,1)), color-stop(68%, rgba(183,18,81,1)), color-stop(85%, rgba(138,30,89,1)), color-stop(100%, rgba(89,39,127,1)));
+background: -webkit-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -o-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -ms-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: linear-gradient(to right, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#569f99', endColorstr='#59277f', GradientType=1 );
+
+
+
+
+
+      -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: ;  
+  color: transparent;  
+
+
+}
+
+
+
+
+.fondoDegradado{
+  background: rgba(86,159,153,1);
+background: -moz-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(86,159,153,1)), color-stop(12%, rgba(220,220,33,1)), color-stop(31%, rgba(247,234,57,1)), color-stop(52%, rgba(220,142,26,1)), color-stop(68%, rgba(183,18,81,1)), color-stop(85%, rgba(138,30,89,1)), color-stop(100%, rgba(89,39,127,1)));
+background: -webkit-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -o-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -ms-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: linear-gradient(to right, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#569f99', endColorstr='#59277f', GradientType=1 );
+
+
+}
+
+
+
+
+
+/* Icono descarga */
+
+.lg-download{
+
+visibility:hidden;
+display: none;
+} 
 
 
