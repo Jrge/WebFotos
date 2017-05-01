@@ -21,7 +21,7 @@ class UserController extends Controller{
 
 	public function homeUser(){
 		$datosUsuario=Auth::user()->devolverDatosHome();
-		return View('user.homeUser')->with($datosUsuario);
+		return View('user.homeUser')->with('datosUsuario',$datosUsuario);
 	}
 
 	public function user(){
