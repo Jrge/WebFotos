@@ -47,4 +47,25 @@ class User extends Model implements AuthenticatableContract,
         $nFotos=Foto::where('idCategoria',$categoria->idCategoria)->where('idParticipante',$this->id)->count();
         return ($nFotos);
     }
+
+
+    public function devolverDatosHome(){
+        $nFotos=Foto::where('idParticipante',$this->id)->count();
+        $fotosUsuario=Foto::where('idParticipante',$this->id)->get();
+        $nVotosTotales=0;
+        foreach ($fotosUsuario as $foto) {
+            $nVotosTotales+=$foto->votos;
+        }
+        $mejorFotoUsuario=$this->mejorFoto();
+        $categoriaMejorFoto=Categoria::where('idCategoria',$mejorFotoUsuario->idCategoria)->first();
+        $tituloCategoria=$categoriaMejorFoto->Titulo;
+        return compact(['nFotos', 'nVotosTotales','mejorFotoUsuario','tituloCategoria']);
+
+    }
+
+
+    public function mejorFoto(){
+        $mejorFotoUsuario=Foto::where('idParticipante',$this->id)->orderBy('votos', 'DESC')->first();
+        return $mejorFotoUsuario;    
+    }
 }

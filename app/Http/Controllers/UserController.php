@@ -20,7 +20,10 @@ class UserController extends Controller{
 	
 
 	public function homeUser(){
-		return View('user.homeUser');
+		$usuario=Auth::user();
+		$datosUsuario=$usuario->devolverDatosHome();
+		dd($datosUsuario);
+		return View('user.homeUser')->with($datosUsuario);
 	}
 
 	public function user(){
@@ -53,7 +56,11 @@ class UserController extends Controller{
             if(($usuario->comprobarNFotos($categoria))<($categoria->limite)){
 	            $foto = new Foto;
             	$foto->subirImagen($categoria->idCategoria, $usuario->id, $usuario->tipoParticipante, $request, $name);
-            	return redirect('user')->with('status', 'Su imagen en la categoria '.$foto->idCategoria. ' ha sido subida con exito, aun puede subir '.($categoria->limite-$usuario->comprobarNFotos($categoria)));               
+            	if($usuario->comprobarNFotos($categoria)!=$categoria->limite){
+            	return redirect('user')->with('status', 'Su imagen en la categoria '.$categoria->Titulo. ' ha sido subida con exito. Número de fotos restantes posibles por subir en esta categoría: '.($categoria->limite-$usuario->comprobarNFotos($categoria))).'.';
+            	}else{
+					return redirect('user')->with('status', 'Su imagen en la categoria '.$categoria->Titulo. ' ha sido subida con exito, ha alcanzado el máximo de fotos permitidas.');
+            	}               
             }else{
             	return redirect('user')->with('status', 'No ha sido posible subir la foto, ha alcanzado el número máximo de fotos para esta categoría.');  	
             }
