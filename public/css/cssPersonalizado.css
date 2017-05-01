@@ -302,7 +302,7 @@ width: auto;
 /* PANEL CONTROL */
 
 .userName{
-margin-top: -0.1em !important;
+margin-top: -0.1em ;
 text-align: center !important;
  color: #9d9d97 !important;
 font-size: 3em !important;
@@ -439,5 +439,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#569f99', end
 visibility:hidden;
 display: none;
 } 
+
+
+
+
+footer{
+
+    margin-top: 50px !important;
+}
 
 

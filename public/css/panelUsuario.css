@@ -1,3 +1,13 @@
+
+.userName{
+
+margin-top: 0.9em !important;
+
+}
+
+
+
+
 .misFotos{
 
 	padding-left: 0px !important;
@@ -93,3 +103,112 @@ overflow: hidden;
 border: 5px solid #ddd;
 border-radius: 4px;
 }
+
+
+
+
+/* HOME */
+
+h5{
+
+	text-align: center;
+    color: #a0a19a !important;
+
+}
+
+
+.imgPerfil{
+
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+.txtUser{
+
+	font-size: 18px;
+    text-transform: uppercase;
+    color: #a0a19a;
+
+ }
+
+
+ .contentPerfil{
+	border: 2px solid #ddd;
+	border-radius: 10px;
+	padding: 20px;
+ }
+
+
+ .posicion{
+	width: 100px;
+	height: 100px;
+    background-image: url("../image/Posicion.png");
+    text-align: center;
+	margin: 0 auto;
+
+ }
+
+
+ .eleCentrados{
+    text-align: center;
+	margin: 0 auto;
+
+
+ }
+
+
+ .pos{
+ 	padding-top: 22% !important;
+	padding-right: 2% !important;
+	color: black;
+ }
+
+ .fa-camera{
+
+ 	float: left;
+ 	padding: 5px;
+	font-size: 21px !important;
+	color: #a0a19a;
+ }
+
+
+.fa-thumbs-up{
+
+ 	float: left;
+ 	padding: 5px;
+	font-size: 23px !important;
+	color: #a0a19a;
+ }
+
+
+
+.categoriaTxt{
+
+	margin-top: 60px;
+}
+
+
+.imgMasVotada{
+
+	border-radius: 10%;
+}
+
+
+.masVotada{
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+
+}
+
+
+.minTit{
+
+    font-size: 23px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+
+

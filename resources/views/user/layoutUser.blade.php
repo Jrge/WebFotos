@@ -10,7 +10,7 @@
             <div class="col-md-1"></div>
 
         <div class="col-md-11 nomarggin">
-            <img class="img-responsive" src="image/adminpanel/panelAdmin.jpg">
+           <!-- <img class="img-responsive" src="image/adminpanel/panelAdmin.jpg">-->
             <h1 class="userName">Usuario {{Auth::user()->name}}</h1>
         </div>
     </div>

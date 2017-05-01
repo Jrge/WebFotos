@@ -56,10 +56,24 @@ class User extends Model implements AuthenticatableContract,
         foreach ($fotosUsuario as $foto) {
             $nVotosTotales+=$foto->votos;
         }
-        $mejorFotoUsuario=$this->mejorFoto();
-        $categoriaMejorFoto=Categoria::where('idCategoria',$mejorFotoUsuario->idCategoria)->first();
-        $tituloCategoria=$categoriaMejorFoto->Titulo;
-        return compact(['nFotos', 'nVotosTotales','mejorFotoUsuario','tituloCategoria']);
+
+        $mejorFotoUsuario=Foto::where('idParticipante',$this->id);
+
+
+        if(Foto::where('idParticipante',$this->id)->orderBy('votos', 'DESC')->first()!=null){
+            $mejorFotoUsuario=$this->mejorFoto();
+            $categoriaMejorFoto=Categoria::where('idCategoria',$mejorFotoUsuario->idCategoria)->first();
+            $tituloCategoria=$categoriaMejorFoto->Titulo;
+             return compact(['nFotos', 'nVotosTotales','mejorFotoUsuario','tituloCategoria']);
+        }
+
+        else{
+            $mejorFotoUsuario=null;
+            $tituloCategoria=null;
+             return compact(['nFotos', 'nVotosTotales','mejorFotoUsuario','tituloCategoria']);
+        }
+
+       
 
     }
 

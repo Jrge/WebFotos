@@ -6,7 +6,7 @@
 @section('contenidoAdmin')
 
 @if (Session::has('mensaje'))
-<div class='text-success'>
+<div class='alert alert-info'>
     {{Session::get('mensaje')}}
 </div>
 @endif
