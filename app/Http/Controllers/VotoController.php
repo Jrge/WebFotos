@@ -24,6 +24,8 @@ class VotoController extends Controller
             $nombreArchivo=Input::get('btnVotar');
             $foto=Foto::where('nombreArchivo',$nombreArchivo)->first();
             $voto=Votacion::where('ip',$request->ip())->where('idFoto',$foto->idFoto)->orderBy('created_at', 'DESC')->first();
+            if(Auth::user()==null) return redirect('votar')->with('status', 'Necesitas estar registrado para poder votar.');
+            
             if($foto->idParticipante != Auth::user()->id){
                 if($voto==null || ($voto!=null && $voto->posibleVotar())){
                     $nuevoVoto=new Votacion;
