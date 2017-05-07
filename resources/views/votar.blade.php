@@ -72,8 +72,8 @@
     </form>
 <div class="col-md-3 col-sm-3">
 
-  <div class="item" data-src="fotografias/{{$foto->nombreArchivo }}"  data-sub-html="#con{{$foto->idFoto}}">
-    <img class="img-responsive" src="fotografias/{{$foto->nombreArchivo }}"/> 
+  <div class="item item-image" data-src="fotografias/{{$foto->nombreArchivo }}"  data-sub-html="#con{{$foto->idFoto}}">
+    <img class="img-responsive sameRadio" src="fotografias/{{$foto->nombreArchivo }}"/> 
   </div>
 
  <div id="con{{$foto->idFoto}}" class="row">

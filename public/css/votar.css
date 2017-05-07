@@ -12,8 +12,9 @@
 	padding: 0 !important;
 	font-size: 1.5em !important;
 	color: white;
-	text-align: center;
-    margin-top: 0.5em;
+    padding-left: 20px !important;
+    text-transform: uppercase;
+    color: #9d9d97 !important;
 
 
 }
@@ -40,6 +41,73 @@
     background-image: url('../image/votar/votarBtnHover.png') !important;
 
 }
+
+
+
+
+/* IMAGE SAME SIZE RADIO*/
+
+.item-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  padding-bottom: 60%; /* here the desired aspect ratio */
+}
+.item-image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.item-content {
+  padding: 15px;
+  background: #72cffa;
+}
+.item-text {
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+
+
+/*Efecto Zoom */
+
+.item-image img {
+-webkit-transition-duration: 0.6s;
+-moz-transition-duration: 0.6s;
+-o-transition-duration: 0.6s;
+
+
+  filter: none;
+-webkit-filter: grayscale(0);
+-webkit-transform: scale(1.1);
+
+
+
+}
+
+.item-image img:hover {
+    cursor:pointer;
+    -webkit-transform: scale( 1.5 );
+-moz-transform: scale( 1.5 );
+-o-transform: scale( 1.5 );
+box-shadow: 0px 0px 25px gray;
+-webkit-box-shadow: 0px 0px 25px gray;
+-moz-box-shadow: 0px 0px 25px gray;
+z-index: 10;
+
+
+ filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+filter: gray; /* IE5+ */
+-webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+-webkit-transition: all .5s ease-in-out;
+
+}
+
+
+
 
 footer{
     margin-top: 20px !important;
