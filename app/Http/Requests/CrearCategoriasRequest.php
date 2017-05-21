@@ -26,6 +26,7 @@ class CrearCategoriasRequest extends Request
         return [    
             'titulo' => 'required|min:5|max:20|',
             'descripcion' => 'required|min:5|max:50|',
+            'limite' => 'numeric|min:1|max:10',
             ];
     }
 
@@ -38,6 +39,9 @@ class CrearCategoriasRequest extends Request
             'descripcion.required' => 'El campo es requerido',
             'descripcion.min' => 'El mínimo de caracteres permitidos son 5',
             'descripcion.max' => 'El máximo de caracteres permitidos son 50',
-        ];
+            'limite.required' => 'El campo es requerido',
+            'limite.min' => 'El límite minimo de fotos permitido es 1.',
+            'limite.max' => 'El límite máximo de fotos permitido es 10.',
+            ];
     }
 }
