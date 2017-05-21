@@ -23,16 +23,21 @@ class VotoController extends Controller
         if($request->exists('btnVotar')){ //SI SE HA PULSADO EL BOTON DE VOTAR SOBRE UNA IMAGEN..
             $nombreArchivo=Input::get('btnVotar');
             $foto=Foto::where('nombreArchivo',$nombreArchivo)->first();
-            $voto=Votacion::where('ip',$request->ip())->where('idFoto',$foto->idFoto)->orderBy('created_at', 'DESC')->first();
+            $voto=Votacion::where('ip',$request->ip())->where('idFoto',$foto->idFoto)->orderBy('updated_at', 'DESC')->first();
+
+
             if(Auth::user()==null) return redirect('votar')->with('status', 'Necesitas estar registrado para poder votar.');
             
             if($foto->idParticipante != Auth::user()->id){
-                if($voto==null || ($voto!=null && $voto->posibleVotar())){
+                if($voto==null){
                     $nuevoVoto=new Votacion;
-                    $nuevoVoto->votar($foto->idFoto,$request);
+                    $nuevoVoto->crearVoto($foto->idFoto,$request);
                     $foto->aumentarVoto();
-
-                    return redirect('votar')->with('status', 'Su voto ha sido contabilizado, la imagen cuenta con '.$foto->votos.' votos');  
+                    return redirect('votar')->with('status', 'Su voto ha sido contabilizado, la imagen cuenta con '.$foto->votos.' votos');
+                }elseif ($voto!=null && $voto->posibleVotar()) {
+                    $voto->actualizarVoto();
+                    $foto->aumentarVoto();
+                    return redirect('votar')->with('status', 'Su voto ha sido actualizado, la imagen cuenta con '.$foto->votos.' votos');
                 }else{
 
                     
