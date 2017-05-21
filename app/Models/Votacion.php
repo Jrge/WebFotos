@@ -35,6 +35,7 @@ class Votacion extends Model
     }
 
     public function actualizarVoto(){
+        $this->touch();
         $this->save();
     }
 }
