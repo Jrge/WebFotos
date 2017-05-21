@@ -22,9 +22,9 @@
    <input type="text" name="descripcion" class="form-control" value="{{Input::old('descripcion')}}" />
    <div class="text-danger">{{$errors->first('descripcion')}}</div>
 
-   <label for="descripcion">Limite fotos por cada usuario</label>
+   <label for="limite">Limite fotos por cada usuario</label>
    <input type="number" name="limite" class="form-control" value="{{Input::old('limite')}}" />
-   <div class="text-danger">{{$errors->first('descripcion')}}</div>
+   <div class="text-danger">{{$errors->first('limite')}}</div>
 
 
 <div class="col-md-12 row-fluid">

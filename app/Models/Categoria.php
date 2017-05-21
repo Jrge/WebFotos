@@ -23,4 +23,13 @@ class Categoria extends Model
         $this->icono=$request->optradio;
         $this->save();
     }
+
+
+    public function actualizarCategoria(Request $request){
+        $this->Titulo=$request->titulo;
+        $this->descripcion=$request->descripcion;
+        $this->limite=$request->limite;
+        $this->icono=$request->optradio;
+        $this->save();
+    }
 }
