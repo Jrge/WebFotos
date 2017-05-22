@@ -124,6 +124,13 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
     }
 
 
+    public function gestionCategoria(){
+
+            $categorias=Categoria::paginate(10);
+            return View('admin.adminGestionarCategoria',compact('categorias'));
+    }
+
+
      public function gestionarUsuarios(Request $request){
            // $claseExitosa="alert alert-success";
             //$claseError="alert alert-danger";

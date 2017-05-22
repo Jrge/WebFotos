@@ -17,19 +17,19 @@ body {
 
 p{
     color: #9d9d97;
-    font-size: 1.6vw;
+    font-size: 1.6em;
 }
 
 h2{
 
-    font-size: 2vw;
+    font-size: 2em;
     color: white;
 }
 
 
 p,h2,form{
        font-family:"FuenteFoto"; 
-       text-align: justify;
+       text-align: center;
 
 }
 
@@ -137,11 +137,11 @@ text-decoration: none;
 /* ESTILOS INDEX */
 
 .fondoVotar{
-
 background-image: url('../image/votaFotos.jpg');
 background-repeat:no-repeat;
 min-height: 300px;
 padding: 0px;
+background-size: cover;
 }
 
 .carousel-inner {
@@ -447,5 +447,4 @@ footer{
 
     margin-top: 50px !important;
 }
-
 

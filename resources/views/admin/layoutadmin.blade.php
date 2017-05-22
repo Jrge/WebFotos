@@ -27,10 +27,12 @@
                 <ul class="nav">
                     <li class="active"><a href="{{url('admin')}}">Panel Administrador</a></li>
                     <li class="nav-divider"></li>
-                    <li><a href="{{url('adminCategorias')}}">Generar Categorias</a></li>
+                    <li><a class="menuAdmin" href="{{url('adminCategorias')}}">Generar Categorias</a></li>
                     <li><a href="{{url('adminFotos')}}">Administrar Fotos</a></li>
                     <li><a href="{{url('adminAdministradores')}}">Promocionar Usuarios</a></li>
                     <li><a href="{{url('adminListadoFotografias')}}">Listado Votados</a></li>
+                    <li><a href="{{url('adminGestionarCategoria')}}">Modificar Categorias</a></li>
+
                      <li><a href="{{url('estadisticas')}}">Estadísticas</a></li>
                    
 
@@ -44,5 +46,15 @@
 
  </div>
 </div>
+
+
+<script>
+    
+
+       $('.menuAdmin').click(function(){
+    $(this).addClass('focusable').siblings().removeClass('focusable');
+    });
+</script>
+
 
 @endsection

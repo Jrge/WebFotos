@@ -140,3 +140,10 @@ border-bottom: 2px solid;
 
     margin-top: 10px;
 }
+
+
+
+
+.focusable {
+    background-color: blue !important;
+}
