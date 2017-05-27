@@ -37,10 +37,8 @@ class VotoController extends Controller
                 }elseif ($voto!=null && $voto->posibleVotar()) {
                     $voto->actualizarVoto();
                     $foto->aumentarVoto();
-                    return redirect('votar')->with('status', 'Su voto ha sido actualizado, la imagen cuenta con '.$foto->votos.' votos');
+                    return redirect('votar')->with('status', 'Su voto ha sido contabilizado, la imagen cuenta con '.$foto->votos.' votos');
                 }else{
-
-                    
                     return redirect('votar')->with('status', 'Solo se permite un voto cada 24 horas.');  
                 }
             }else{

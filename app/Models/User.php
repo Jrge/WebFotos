@@ -10,6 +10,8 @@ use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use App\Models\Categoria;
+use App\Models\Foto;
 
 class User extends Model implements AuthenticatableContract,
                                     AuthorizableContract,
@@ -81,5 +83,36 @@ class User extends Model implements AuthenticatableContract,
     public function mejorFoto(){
         $mejorFotoUsuario=Foto::where('idParticipante',$this->id)->orderBy('votos', 'DESC')->first();
         return $mejorFotoUsuario;    
+    }
+
+
+    /*
+    Función para subir imagen.
+    Le pasamos un request con los datos de la vista, si es posible generamos la nueva foto, y retornamos un mensaje con el estado del proceso a la vista
+    */
+
+    public function subirImagen($request){
+        //generamos una cadena aleatoria para el nombre del fichero y lo movemos a la carpeta del servidor.
+        $name = str_random(30) . '-' . $request->file('image')->getClientOriginalName();
+        $request->file('image')->move('fotografias', $name);
+
+        //recogemos los valores de la vista a través del request 
+        $select = $request->input('optradio');
+        $categoria=Categoria::where('Titulo',$select)->first();
+        $this->comprobarNFotos($categoria);
+        //si el usuario no ha superado el limite de fotos en la categoria, generamos la tupla en la BD
+        if(($this->comprobarNFotos($categoria))<($categoria->limite)){
+            $foto = new Foto;
+            $foto->subirImagen($categoria->idCategoria, $this->id, $this->tipoParticipante, $request, $name);
+            if($this->comprobarNFotos($categoria)!=$categoria->limite){
+                return 'Su imagen en la categoria '.$categoria->Titulo. ' ha sido subida con exito. 
+                Número de fotos restantes posibles por subir en esta categoría: '.($categoria->limite-$this->comprobarNFotos($categoria)).'.';
+            }else{
+                return 'Su imagen en la categoria '.$categoria->Titulo. ' ha sido subida con exito, ha alcanzado el máximo de fotos permitidas.';;
+            }               
+        }else{
+            return 'No ha sido posible subir la foto, ha alcanzado el número máximo de fotos para esta categoría.';
+        }
+        
     }
 }

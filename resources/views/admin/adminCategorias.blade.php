@@ -27,8 +27,8 @@
    <div class="text-danger">{{$errors->first('limite')}}</div>
 
   <label for='image'>Imagen para banner inicio: </label>
-  <input type="file" name="image" />
-  <div class='text-danger'>{{$errors->first('image')}}</div>
+  <input type="file" name="banner" />
+  <div class='text-danger'>{{$errors->first('banner')}}</div>
 
 
 <label>Selecciona un icono</label>

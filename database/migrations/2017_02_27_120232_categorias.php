@@ -18,6 +18,7 @@ class Categorias extends Migration
             $table->string('descripcion');
             $table->integer('limite');
             $table->string('icono');
+            $table->string('banner');
             $table->rememberToken();
             $table->timestamps();
         });
