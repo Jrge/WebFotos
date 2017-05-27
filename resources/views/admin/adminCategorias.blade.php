@@ -26,10 +26,12 @@
    <input type="number" name="limite" class="form-control" value="{{Input::old('limite')}}" />
    <div class="text-danger">{{$errors->first('limite')}}</div>
 
+  <label for='image'>Imagen para banner inicio: </label>
+  <input type="file" name="image" />
+  <div class='text-danger'>{{$errors->first('image')}}</div>
 
-<div class="col-md-12 row-fluid">
+
 <label>Selecciona un icono</label>
-</div>
 
 
 <div class="ContainerIconosSelect row-fluid"> 
@@ -207,9 +209,8 @@
 
    
    
-  <button type="submit" class="btnTabla btnCategori">Enviar</button>
-
-    </form>
+  <button type="submit" class="btnTabla btnCategori">Generar Categoria</button>
+  </form>
 
 
 <script>
