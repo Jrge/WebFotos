@@ -28,7 +28,11 @@
 
   <label for='image'>Imagen para banner inicio: </label>
   <input type="file" name="banner" />
+<<<<<<< HEAD
   <div class='text-danger'>{{$errors->first('image')}}</div>
+=======
+  <div class='text-danger'>{{$errors->first('banner')}}</div>
+>>>>>>> origin/master
 
 
 <label>Selecciona un icono</label>
