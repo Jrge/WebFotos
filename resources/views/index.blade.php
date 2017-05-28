@@ -110,7 +110,7 @@
         <div class="row nomarggin">
 
             <div class="col-md-12 nomarggin">
-               <img class="img-responsive nomarggin" src="image/banners/{{$categoria->banner}}"></img>
+               <img class="img-responsive nomarggin" src="banners/{{$categoria->banner}}"></img>
             </div>  
 
 
