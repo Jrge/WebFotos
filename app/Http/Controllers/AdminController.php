@@ -93,20 +93,8 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             ->with("mensaje", "Categoria creada correctamente");
     }
 
-
      public function gestionarFotos(Request $request){
 
-        /*$fotos_checkeadas=$request->input('fotos');
-        if(is_array($fotos_checkeadas)){
-
-            foreach($fotos_checkeadas as $nombreFoto){
-            $foto=Foto::where('nombreArchivo',$nombreFoto)->first();
-            $foto->ponerVisible();
-            }
-        return redirect("adminFotos")
-        ->with("mensaje", "Fotos modificadas correctamente");
-        }
-*/
         $foto=Foto::where('nombreArchivo',$request->input('btnCambiar'))->first();
 
             if($foto->visible>0){
@@ -119,10 +107,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
         return redirect("adminFotos")
         ->with("mensaje","Fotos modificada correctamente");
-
-
     }
-
 
     public function gestionCategoria(){
 
@@ -149,8 +134,6 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             }
 
     }
-
-   
 
     public function estadisticas(){
 

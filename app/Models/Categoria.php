@@ -9,7 +9,7 @@ class Categoria extends Model
 {
 
 
-    protected $fillable = ['idCategoria','Titulo', 'descripcion','limite','icono'];
+    protected $fillable = ['idCategoria','Titulo', 'descripcion','limite','icono', 'banner'];
 
 
     protected $hidden = ['remember_token'];
