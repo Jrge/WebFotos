@@ -5,19 +5,23 @@
 
 	<title>Concurso Fotografía</title>
 	<!-- link CSS -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/magic.css')}}">
     <link rel="stylesheet" href="{{asset('css/cssPersonalizado.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    @yield('linkCss')
 
+    @yield('linkCss')
+    <script src="{{ URL::asset('js/personalizado.js') }}"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
 
 	<!-- link JQUERY -->
     <script src="{{ URL::asset('js/jquery.js') }}"></script>
     <script src="{{ URL::asset('js/jquery.waypoints.js') }}"></script>
     <script src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+
 
     @yield('linkJs')
 
@@ -79,3 +83,4 @@
 </footer>
 </html>
 @show
+

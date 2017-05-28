@@ -27,7 +27,7 @@
    <div class="text-danger">{{$errors->first('limite')}}</div>
 
   <label for='image'>Imagen para banner inicio: </label>
-  <input type="file" name="image" />
+  <input type="file" name="banner" />
   <div class='text-danger'>{{$errors->first('image')}}</div>
 
 
@@ -224,14 +224,6 @@ $("#radio_1").prop("checked", true)
         $('label').parent().removeClass('yellowBackground');
         $(this).parent().addClass('yellowBackground');
     });
-
-  
-  
-
-
-
-
-
 });
 
 </script>   

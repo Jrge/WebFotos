@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Models\Categoria;
+
 
 class MenuController extends Controller
 {
 
     public function retornoIndex(){
-        return view('index');
+        $categorias=Categoria::get();
+        return View('index',compact('categorias'));
     }
 
     public function retornoVotar(){

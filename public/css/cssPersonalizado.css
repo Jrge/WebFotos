@@ -441,6 +441,10 @@ display: none;
 } 
 
 
+.wow{
+    opacity: ;
+}
+
 
 
 footer{
@@ -448,3 +452,37 @@ footer{
     margin-top: 50px !important;
 }
 
+
+
+.efectoCapa {
+
+    max-width: 40%;
+}
+
+
+.efectoCapa h2, p{
+text-align: center;
+}
+
+
+
+.efectoIcon{
+font-size: 150px !important;
+}
+
+.alingCenter{
+text-align: center;
+
+
+}
+
+
+@media (max-width: 979px) {
+.efectoCapa {
+
+    max-width: 80% !important;
+padding: 0px;
+margin: 2% auto;
+}
+
+}

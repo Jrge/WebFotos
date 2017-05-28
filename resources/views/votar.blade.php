@@ -3,10 +3,7 @@
 @section('linkCss')
 <link rel="stylesheet" href="{{asset('css/votar.css')}}">
 <link rel="stylesheet" href="{{asset('css/lg-fb-comment-box.css')}}">
-
-
 <link rel="stylesheet" href="{{asset('css/lightgallery.css')}}">
-
 
 @endsection
 
@@ -17,10 +14,7 @@
 
 <!-- A jQuery plugin that adds cross-browser mouse wheel support. (Optional) -->
 <script src="{{ URL::asset('js/jquery.mousewheel.min.js') }}"></script>
-
-
 <script src="{{ URL::asset('js/lightgallery.min.js') }}"></script>
-
 <!-- lightgallery plugins -->
 <script src="{{ URL::asset('js/lg-thumbnail.min.js') }}"></script>
 <script src="{{ URL::asset('js/lg-fullscreen.min.js') }}"></script>
@@ -57,7 +51,7 @@
 
             <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class=' center-block btnCategorias'>
             <i id="" class="{{$categoria->icono}} iconoCategorias" aria-hidden="true"></i>
- 
+
         </button>
         @endforeach 
     </div>
@@ -95,7 +89,7 @@
      </div><!--fin id Selector-->
 
 
-@endif
+  @endif
 
 
 

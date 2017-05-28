@@ -1,6 +1,13 @@
-@extends('layout')
 
+@extends('layout')
+@section('linkCss')
+<link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+<script src="{{ URL::asset('js/personalizado.js') }}"></script>
+
+@endsection
 @section('content')
+
 
     <div id="myCarousel" class="carousel slide">
         <!-- Indicators -->
@@ -85,18 +92,62 @@
     </div>
 
 
+    <!--Banners Categoria-->
+
+    <!--retornas las categorias-->
+    <script>
+        
+        AOS.init({
+  duration: 1200,
+})
+
+    </script>
+
+
+    @foreach ($categorias as $categoria)
+
+    <div class="container-fluid nomarggin">
+        <div class="row nomarggin">
+
+            <div class="col-md-12 nomarggin">
+               <img class="img-responsive nomarggin" src="image/banners/{{$categoria->banner}}"></img>
+            </div>  
+
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid nomarggin">
+        <div class="row nomarggin" >
+         <div class="col-md-6  col-xs-12 centrado" >
+             <div data-aos="fade-right" class="alingCenter">
+             <i  class="{{$categoria->icono}} iconoCategorias efectoIcon" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div data-aos="fade-left" class="col-md-6 col-xs-12 marginTxt efectoCapa">
+        <h2>{{$categoria->Titulo}}</h2>
+        <p>{{$categoria->descripcion}}</p>       
+        </div>
+            
+        </div>
+    </div>
+
+    @endforeach 
+
+<!--
 	<div class="container-fluid nomarggin">
-	<div class="row nomarggin">
-		<div class="col-md-12 nomarggin">
-		<img class="img-responsive nomarggin" src="image/fotografiaUrbana.jpg"></img>
-		</div>	
+    	<div class="row nomarggin">
+    		<div class="col-md-12 nomarggin">
+    		<img class="img-responsive nomarggin" src="image/fotografiaUrbana.jpg"></img>
+    		</div>	
+    	</div>
 	</div>
-	    </div>
 
 
     <div class="container-fluid nomarggin">
     	<div class="row nomarggin movimiento" >
-    	<!--<div class="col-md-1 "></div>-->
     	<div class="col-md-6  col-xs-6 centrado" >
     		<img class="img-responsive nomarggin" src="image/urbano.png">
     		</div>
@@ -155,15 +206,16 @@
 
     
 <script>
-
+/*
 jQuery(function($) {
-$('.movimiento').waypoint(function() {
-$('.movimiento').addClass( 'magictime spaceInLeft' );
-},
-{
-offset: '70%',
-triggerOnce: true
-});
+
+    $('.movimiento').waypoint(function() {
+    $('.movimiento').addClass( 'magictime spaceInLeft' );
+    },
+    {
+    offset: '70%',
+    triggerOnce: true
+    });
 });
 
 jQuery(function($) {
@@ -187,12 +239,8 @@ offset: '70%',
 triggerOnce: true
 });
 });
-
-
-
+*/
 </script>
-	
 
-
-
+-->
 @endsection
