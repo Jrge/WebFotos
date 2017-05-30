@@ -11,8 +11,7 @@ use Illuminate\View\Engines\EngineResolver;
 use Illuminate\Support\Contracts\ArrayableInterface as Arrayable;
 use DB;
 use Illuminate\Support\Facades\View;
-
-
+use Input; 
 use App\Models\User;
 use Validator;
 use Auth;
@@ -132,6 +131,14 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
                 //->with("claseMsg","alert alert-danger")
                 ->withInput();  
             }
+
+    }
+
+
+    public function modificarCategorias(){
+        $variable=Input::get('btnCambiar');
+        $categoria = DB::table('categorias')->where('idCategoria', $variable)->get();
+        return View('admin.adminModificarCategorias',compact('categoria'));
 
     }
 

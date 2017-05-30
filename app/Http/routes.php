@@ -32,6 +32,7 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('homeUser','UserController@homeUser');
 Route::post('homeUser','UserController@subirFotoPerfil');
 
+
 Route::get('user', 'UserController@vistaSubirFotos');
 Route::post('user', 'UserController@subirImagen');
 Route::get('misFotos', 'UserController@vistaMisFotos');
@@ -62,6 +63,8 @@ Route::group(['middleware' =>  ['auth', 'isAdmin']], function() {
 
 	Route::get('adminListadoFotografias', 'AdminController@listadoFotos');
 	Route::post('adminListadoFotografias', 'AdminController@devuelvelistadoFotos');  
+
+	Route::post('adminModificarCategorias','AdminController@modificarCategorias');
 
   
 });

@@ -21,10 +21,8 @@
             <td>{{$categoria->Titulo}}</td>
             <td>{{$categoria->limite}}</td>
             <td>
-            <form method='post' action='{{url("adminFotos")}}' enctype='multipart/form-data'>{{csrf_field()}}
-        
+            <form method='post' action='{{url("adminModificarCategorias")}}' enctype='multipart/form-data'>{{csrf_field()}}
             <button type="submit" name="btnCambiar" class="btnTabla" value="{{$categoria->idCategoria}}">Modificar</button>   
-      
             </form>
             </td>
           </tr>
