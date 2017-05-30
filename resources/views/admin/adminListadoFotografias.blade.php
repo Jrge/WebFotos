@@ -3,21 +3,32 @@
 <link rel="stylesheet" href="{{asset('css/listadoFotos.css')}}">
 @endsection
 @section('contenidoAdmin')
+
+
 {!!Form::model(Request::all(), [ 'method' => 'POST' ]) !!}
 <div class="col-md-4">
+
+<form method='post' action='{{url("adminListadoFotografias")}}' enctype='multipart/form-data'>
+{{csrf_field()}}
     <div class="form-group">
-    <label for="categoria">Tipo de usuario:</label>
 
-    {!! Form::select('categoria', [
-    'todos' => 'Todos',
-    'alumno' => 'Alumno/Alumna',
-    'tutor' => 'Padre/Madre',
-    'profesor' => 'Profesor/Profesora']
-    ,null, ['class' =>'form-control']) !!}
- 
+         <div class="checkbox">
+          <label><input type="checkbox" name="alumno" value="alumno">Alumno/Alumna</label>
+        </div>
+        <div class="checkbox">
+          <label><input type="checkbox" name="tutor" value="tutor">Padre/Madre</label>
+        </div>
+
+        <div class="checkbox">
+          <label><input type="checkbox" name="profesor" value="profesor">Profesor/Profesora</label>
+        </div>
+
+
     </div>
+</form>
 
-</div>
+
+    </div>
 
 <div class="col-md-4">
     <div class="form-group">
