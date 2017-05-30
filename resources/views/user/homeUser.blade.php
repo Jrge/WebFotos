@@ -6,13 +6,31 @@
 			<div class="col-md-12 capaPos masVotada barraFondo"></div>
 
 <div class="col-md-3 contentPerfil"> 	
+
+
         <img class="img-responsive imgPerfil" src="image/FotoPerfil.png">
         <h5 class="txtUser">{{Auth::user()->name}}</h5>
         <h5>{{Auth::user()->email}}</h5>
+
 </div>
 
-		{{Form::file('fotoPerfil')}}
-        {{Form::submit('Guardar')}}
+<div class="col-md-6 "> 	
+
+
+<form method='post' action='{{url("user")}}' enctype='multipart/form-data'>
+{{csrf_field()}}
+	<div class='form-group'>
+		<label for='imagePerfil'>Cambiar imagen de perfil</label>
+		<input type="file" name="imagePerfil" />
+		<button type='submit' class='btn-primary'>Subir Imagen</button>
+	</div>
+
+</form>
+</div>
+
+
+
+
 
 <div class="col-md-4">
 	<i class="fa fa-camera" aria-hidden="true"></i>
