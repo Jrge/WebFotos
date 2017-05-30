@@ -11,6 +11,7 @@
 </div>
 @endif
 
+ {{{ dd($categoria)}}}
 
     <form method='post' action='{{url("adminCategorias")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
