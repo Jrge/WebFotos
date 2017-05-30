@@ -25,6 +25,10 @@ class UserController extends Controller{
 		return View('user.homeUser')->with('datosUsuario',$datosUsuario);
 	}
 
+	public function subirFotoPerfil(ImagenPerfilRequest $request){
+		return View('user.homeUser')->with('mensaje',"Foto de perfil modificada correctamente");
+	}
+
 	public function user(){
 		return View('user.homeUser');
 	}

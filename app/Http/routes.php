@@ -30,6 +30,7 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 
 
 Route::get('homeUser','UserController@homeUser');
+Route::post('homeUser','UserController@subirFotoPerfil');
 
 Route::get('user', 'UserController@vistaSubirFotos');
 Route::post('user', 'UserController@subirImagen');
