@@ -19,11 +19,12 @@
 </div>
 
 <div class="col-md-6 "> 	
-<form method='post' action='{{url("user")}}' enctype='multipart/form-data'>
+<form method='post' action='{{url("homeUser")}}' enctype='multipart/form-data'>
 {{csrf_field()}}
 	<div class='form-group'>
 		<label for='imagePerfil'>Cambiar imagen de perfil</label>
 		<input type="file" name="imagePerfil" />
+		<div class="text-danger">{{$errors->first('imagePerfil')}}</div>
 		<button type='submit' class='btn-primary'>Subir Imagen</button>
 	</div>
 

@@ -118,8 +118,8 @@ class User extends Model implements AuthenticatableContract,
     }
 
     public function subirImagenPerfil($request){
-	 	$name = str_random(30) . '-' . $request->file('image')->getClientOriginalName();
-        $request->file('image')->move('fotosPerfil', $name);
+	 	$name = str_random(30) . '-' . $request->file('imagePerfil')->getClientOriginalName();
+        $request->file('imagePerfil')->move('fotosPerfil', $name);
         $this->fotoPerfil=$name;
         $this->save();
     }

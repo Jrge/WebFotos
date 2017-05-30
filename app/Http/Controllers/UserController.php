@@ -9,6 +9,7 @@ use Validator;
 use Auth;
 use App\Models\User;
 use App\Http\Requests\SubirImagenRequest;
+use App\Http\Requests\ImagenPerfilRequest;
 
 use Input;
 
@@ -26,7 +27,11 @@ class UserController extends Controller{
 	}
 
 	public function subirFotoPerfil(ImagenPerfilRequest $request){
-		return View('user.homeUser')->with('mensaje',"Foto de perfil modificada correctamente");
+		Auth::user()->subirImagenPerfil($request);
+		//volvemos a cargar los datos del usuario ya que la vista los necesita
+		$usuario=Auth::user();
+		$datosUsuario=$usuario->devolverDatosHome();
+		return redirect('homeUser')->with('datosUsuario',$datosUsuario);
 	}
 
 	public function user(){

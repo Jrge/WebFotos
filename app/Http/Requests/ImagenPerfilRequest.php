@@ -24,15 +24,16 @@ class ImagenPerfilRequest extends Request
     public function rules()
     {
         return [    
-                    'image' => 'required|image|max:3',
+                'imagePerfil' => 'required|image|max:3072',
+                ];
     }
 
     public function messages()
     {
         return [
-            'image.required' => 'La imagen es requerida',
-            'image.image' => 'Formato no permitido',
-            'image.max' => 'El máximo permitido es 3 MB',
+            'imagePerfil.required' => 'La imagen es requerida',
+            'imagePerfil.image' => 'Formato no permitido',
+            'imagePerfil.max' => 'El máximo permitido es 3 MB',
         ];
     }
 }
