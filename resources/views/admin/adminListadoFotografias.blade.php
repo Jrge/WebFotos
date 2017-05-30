@@ -7,11 +7,11 @@
 
 {!!Form::model(Request::all(), [ 'method' => 'POST' ]) !!}
 <form method='post' action='{{url("adminListadoFotografias")}}' enctype='multipart/form-data'>
-
+{!!csrf_field()!!}
 
 <div class="col-md-4">
 
-{{csrf_field()}}
+
     <div class="form-group">
 
          <div class="checkbox">
