@@ -6,9 +6,11 @@
 
 
 {!!Form::model(Request::all(), [ 'method' => 'POST' ]) !!}
+<form method='post' action='{{url("adminListadoFotografias")}}' enctype='multipart/form-data'>
+
+
 <div class="col-md-4">
 
-<form method='post' action='{{url("adminListadoFotografias")}}' enctype='multipart/form-data'>
 {{csrf_field()}}
     <div class="form-group">
 
@@ -22,13 +24,10 @@
         <div class="checkbox">
           <label><input type="checkbox" name="profesor" value="profesor">Profesor/Profesora</label>
         </div>
-
-
     </div>
-</form>
 
+</div>
 
-    </div>
 
 <div class="col-md-4">
     <div class="form-group">
@@ -37,12 +36,17 @@
     </div>
 </div>
 
+
+
 <div class="col-md-4">
     <div class="form-group">
      <button type="submit" class="btnTabla">Filtrar</button>
     </div>
-{!! Form::close()!!}
 </div>
+
+
+</form>
+
 
 
 <div class="row-fluid">
