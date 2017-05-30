@@ -41,7 +41,7 @@ class User extends Model implements AuthenticatableContract,
         $this->email = $request->email;
         $this->password = bcrypt($request->password);
         $this->tipoParticipante = $request->tipoParticipante;
-        $this->fotoPerfil='ninguna';
+        $this->fotoPerfil='FotoPerfil.png';
         $this->save();
     }
 
@@ -120,7 +120,7 @@ class User extends Model implements AuthenticatableContract,
     public function subirImagenPerfil($request){
 	 	$name = str_random(30) . '-' . $request->file('image')->getClientOriginalName();
         $request->file('image')->move('fotosPerfil', $name);
-        $this->fotosPerfil=$name;
+        $this->fotoPerfil=$name;
         $this->save();
     }
 }
