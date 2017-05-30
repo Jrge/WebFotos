@@ -11,6 +11,8 @@
         <h5>{{Auth::user()->email}}</h5>
 </div>
 
+		{{Form::file('fotoPerfil')}}
+        {{Form::submit('Guardar')}}
 
 <div class="col-md-4">
 	<i class="fa fa-camera" aria-hidden="true"></i>

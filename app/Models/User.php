@@ -21,7 +21,7 @@ class User extends Model implements AuthenticatableContract,
 
     protected $table = 'users';
 
-    protected $fillable = ['name', 'email', 'password','tipoParticipante'];
+    protected $fillable = ['name', 'email', 'password','tipoParticipante','fotoPerfil'];
 
     protected $hidden = ['password', 'remember_token'];
 
@@ -41,6 +41,7 @@ class User extends Model implements AuthenticatableContract,
         $this->email = $request->email;
         $this->password = bcrypt($request->password);
         $this->tipoParticipante = $request->tipoParticipante;
+        $this->fotoPerfil='ninguna';
         $this->save();
     }
 
@@ -114,5 +115,12 @@ class User extends Model implements AuthenticatableContract,
             return 'No ha sido posible subir la foto, ha alcanzado el número máximo de fotos para esta categoría.';
         }
         
+    }
+
+    public function subirImagenPerfil($request){
+	 	$name = str_random(30) . '-' . $request->file('image')->getClientOriginalName();
+        $request->file('image')->move('fotosPerfil', $name);
+        $this->fotosPerfil=$name;
+        $this->save();
     }
 }
