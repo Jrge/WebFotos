@@ -6,17 +6,19 @@
 			<div class="col-md-12 capaPos masVotada barraFondo"></div>
 
 <div class="col-md-3 contentPerfil"> 	
+@if (Session::has('mensaje'))
+<div class='alert alert-info'>
+    {{Session::get('mensaje')}}
+</div>
+@endif
 
-
-        <img class="img-responsive imgPerfil" src="image/FotoPerfil.png">
+        <img class="img-responsive imgPerfil" src="fotosPerfil/{{Auth::user()->fotoPerfil}}">
         <h5 class="txtUser">{{Auth::user()->name}}</h5>
         <h5>{{Auth::user()->email}}</h5>
 
 </div>
 
 <div class="col-md-6 "> 	
-
-
 <form method='post' action='{{url("user")}}' enctype='multipart/form-data'>
 {{csrf_field()}}
 	<div class='form-group'>
