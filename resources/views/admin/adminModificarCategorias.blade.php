@@ -10,26 +10,24 @@
     {{Session::get('mensaje')}}
 </div>
 @endif
-
- {{{ dd($categoria)}}}
-
+  
     <form method='post' action='{{url("adminCategorias")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
 
    <label for="titulo">Titulo Categoria:</label>
-   <input type="text" name="titulo" class="form-control" value="{{Input::old('titulo')}}" />
+   <input type="text" name="titulo" class="form-control" value="{{$categoria->Titulo}}" />
    <div class="text-danger">{{$errors->first('titulo')}}</div>
 
    <label for="descripcion">Descripcion Categoria:</label>
-   <input type="text" name="descripcion" class="form-control" value="{{Input::old('descripcion')}}" />
+   <input type="text" name="descripcion" class="form-control" value="{{$categoria->descripcion}}" />
    <div class="text-danger">{{$errors->first('descripcion')}}</div>
 
    <label for="limite">Limite fotos por cada usuario</label>
-   <input type="number" name="limite" class="form-control" value="{{Input::old('limite')}}" />
+   <input type="number" name="limite" class="form-control" value="{{$categoria->limite}}" />
    <div class="text-danger">{{$errors->first('limite')}}</div>
 
   <label for='image'>Imagen para banner inicio: </label>
-  <input type="file" name="banner" />
+  <input type="file" name="banner" value="{{$categoria->banner}} />
 
   <div class='text-danger'>{{$errors->first('banner')}}</div>
 
