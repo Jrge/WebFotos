@@ -152,7 +152,7 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
     public function modificarCategorias(){
         $variable=Input::get('btnCambiar');
-        $categoria = DB::table('categorias')->where('idCategoria', $variable)->get();
+        $categoria = DB::table('categorias')->where('idCategoria', $variable)->first();
         return View('admin.adminModificarCategorias',compact('categoria'));
 
     }

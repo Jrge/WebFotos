@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet"> 
 
 	<title>Concurso Fotografía</title>
 	<!-- link CSS -->
@@ -11,7 +12,6 @@
     <link rel="stylesheet" href="{{asset('css/magic.css')}}">
     <link rel="stylesheet" href="{{asset('css/cssPersonalizado.css')}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
 
     @yield('linkCss')
     <script src="{{ URL::asset('js/personalizado.js') }}"></script>

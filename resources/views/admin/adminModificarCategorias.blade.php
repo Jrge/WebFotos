@@ -11,12 +11,11 @@
 </div>
 @endif
 
- {{{ dd($categoria)}}}
-
     <form method='post' action='{{url("adminCategorias")}}' enctype='multipart/form-data'>
     {{csrf_field()}}
-
    <label for="titulo">Titulo Categoria:</label>
+       {{$categoria->Titulo}}
+
    <input type="text" name="titulo" class="form-control" value="{{Input::old('titulo')}}" />
    <div class="text-danger">{{$errors->first('titulo')}}</div>
 
@@ -100,7 +99,7 @@
    <label class="radio-inline">
    <input type="radio" name="optradio" value="fa fa-home"> 
    Edificio</label>
-   <i id="iconoMostrar" class="fa fa-home" aria-hidden="true"></i>
+   <i id="fa-home" class="fa fa-home" aria-hidden="true"></i>
 </div>
 </div>
 
@@ -214,10 +213,19 @@
   <button type="submit" class="btnTabla btnCategori">Generar Categoria</button>
   </form>
 
+<script type="text/javascript">
+  alert('hola')
+
+    var foo = <?php  echo $categoria->Titulo?>;
+alert(foo)
+
+
+</script>
 
 <script>
-$(document).ready(function() {
 
+
+$(document).ready(function() {
 
 $("#radio_1").prop("checked", true)
 

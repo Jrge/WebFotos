@@ -27,7 +27,7 @@
             </div>
             <div class="item">
                 <!-- Set the second background image using inline CSS below. -->
-				<img class="img-responsive" src="image/bannerLaravel.jpg"></img>
+				<img class="img-responsive" src="image/BannerColegio.jpg"></img>
                 <div class="carousel-caption">
                 </div>
             </div>
@@ -59,35 +59,81 @@
     })
     </script>
 
-     <div class="container-fluid nomarggin">
+     <div class="container-fluid nomarggin ">
+
+
+
+
+        <div class="contenedorSVGW"><svg class="containerPoligono"><polygon class="poliColor" points="3000 0 3000 100 0 100"></polygon></svg>
+        </div>
+
     	<div class="row nomarggin" >
-    			<div class="col-md-12 nomarggin fondoVotar">
-    			<p class="txtVotar centrado marginTop">Vota por tu imagen favorita</p>
-    			<a href="{{url('votar')}}" id="btnVotar" class="btn btn-primary btn-lg active btnPersonalizado" role="button">Votar</a>
+
+        
+    		<div class="col-md-4 nomarggin fondoVotar">
+                <p class="txtVotar centrado marginTop">Resgistrate y participa</p>
+                 <img data-aos="zoom-in-right" class="img-responsive imgFavorito" src="image/presen2.png"></img>
     		</div>
+
+            <div class="col-md-4 nomarggin fondoVotar ">
+                <p class="txtVotar centrado marginTop">Vota por tu imagen favorita</p>
+                <div class="containerImg">
+                 <img data-aos="zoom-in-up" class="img-responsive imgFavorito" src="image/presen1.png"></img>
+                 </div>
+            </div>
+
+
+            <div class="col-md-4 nomarggin fondoVotar">
+                <p class="txtVotar centrado marginTop">Consigue premios</p>
+                 <img data-aos="zoom-in-left" class="img-responsive imgFavorito" src="image/presen3.png"></img>
+            </div>
+
+
+
+
     	</div>
+
 
    
     </div>
 
+
+
     <div class="container-fluid nomarggin">
+
+
+
+
     	<div class="row nomarggin" >
+
     		<div class="col-md-6 col-xs-6 nomarggin centrado">
-    			<img class="img-responsive nomarggin" src="image/participa.jpg">
+    			<img class="img-responsive nomarggin centerEle " src="image/participa2.jpg">
     		</div>
-    			<div class="col-md-5 col-xs-5 nomarggin">
-				<h2>Participa</h2>
-				<p>Si quieres participar es muy sencillo, sube tu fotografía, puedes participar en las categorias de naturaleza, urbano y artística, recibe votaciones.Las tres fotografías con más votaciones tendrán grandes recompensas.Para ello solo tienes que registrarte en el siguiente enlace</p>
+    			<div class="col-md-6 col-xs-6 centerEle ">
+				<h2 class="titulo colorTitulo titulomd">Sobre el concurso</h2>
+				<p class="txtTitulo">Si quieres participar es muy sencillo, sube tu fotografía, puedes participar en las categorias de naturaleza, urbano y artística, recibe votaciones.Las tres fotografías con más votaciones tendrán grandes recompensas.Para ello solo tienes que registrarte en el siguiente enlace</p>
     			<a href="{{url('auth/register')}}" class="btn btn-primary btn-lg active btnRegistrarse" role="button">Registrarse</a>
     		</div>
     	</div>
+
+        <div class="contenedorSVGW"><svg class="containerPoligono"><polygon class="poliColor" points="3000 0 3000 100 0 100"></polygon></svg>
+        </div>
+
     </div>
 
-    <div class="container-fluid nomarggin">
+
+
+    <div class="container-fluid nomarggin fondoW">
         	<div class="row nomarggin" >
-			<div class="col-md-12 nomarggin">
-			<img class="img-responsive" src="image/categorias.png">
-		    </div>
+    			<div class="col-md-6 nomarggin">
+                <h2 class="titulo txtBlanco colorTitulo">Categorías</h2>
+                <p class="txtTitulo txtBlanco">Si quieres participar es muy sencillo, sube tu fotografía, puedes participar en las categorias de naturaleza, urbano y artística, recibe votaciones.Las tres fotografías con más votaciones tendrán grandes recompensas.Para ello solo tienes que registrarte en el siguiente enlace</p>
+    		    </div>
+
+                <div class="col-md-6 nomarggin">
+                <img class="img-responsive nomarggin" src="image/bannerCategoria.jpg">
+                </div>
+
 			</div>
     </div>
 
@@ -107,14 +153,22 @@
     @foreach ($categorias as $categoria)
 
     <div class="container-fluid nomarggin">
-        <div class="row nomarggin">
 
+
+
+
+        <div class="row nomarggin">
             <div class="col-md-12 nomarggin">
                <img class="img-responsive nomarggin" src="banners/{{$categoria->banner}}"></img>
             </div>  
-
-
         </div>
+
+
+            <div class="contenedorSVGNegro"><svg class="containerPoligono"><polygon class="poliColorW" points="3000 0 3000 100 0 100"></polygon></svg>
+        </div>
+
+
+
     </div>
 
 
@@ -132,6 +186,9 @@
         </div>
             
         </div>
+
+
+
     </div>
 
     @endforeach 

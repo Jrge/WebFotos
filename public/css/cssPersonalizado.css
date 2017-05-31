@@ -7,6 +7,9 @@ body {
     margin: 0px;
     padding: 0px;
     background-color: black;
+
+    font-family: 'Roboto', sans-serif;
+
 }
 
 
@@ -28,8 +31,13 @@ h2{
 
 
 p,h2,form{
-       font-family:"FuenteFoto"; 
        text-align: left;
+
+}
+
+*{
+
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -111,6 +119,9 @@ text-decoration: none;
     margin-right: auto;          
 }
 
+.centerEle{
+    text-align: center !important;
+}
 
 .marginTop{
     margin-top: 6%;
@@ -137,11 +148,14 @@ text-decoration: none;
 /* ESTILOS INDEX */
 
 .fondoVotar{
-background-image: url('../image/votaFotos.jpg');
+/*background-image: url('../image/votaFotos.jpg');
 background-repeat:no-repeat;
-min-height: 300px;
 padding: 0px;
 background-size: cover;
+*/
+background-color: white;
+    padding-bottom: 60px !important;
+
 }
 
 .carousel-inner {
@@ -190,6 +204,7 @@ background-size: cover;
 .btnPersonalizado:hover{
 background-color: #9d9d97 !important;
 border-color: #9d9d97 !important;
+
 }
 
 
@@ -278,8 +293,10 @@ border-color: black !important;
 .txtVotar{
 
     text-align: center;
-    font-size: 3em;
-    color: white;
+    font-size: 24px;
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: -50px;
 
 }
 
@@ -477,6 +494,118 @@ text-align: center;
 }
 
 
+.navbar {
+    z-index: 99;
+    margin-bottom: -20px !important;
+}
+
+.imgFavorito{
+    margin: 0 auto;
+    max-width: 400px !important;
+    padding: 30px;
+}
+
+.navbar-inverse {
+    background-color: black;
+    border-color: black;
+}
+
+
+svg.containerPoligono {
+    margin-top: -99px;
+}
+.containerPoligono {
+    width: 100%;
+    padding: 0px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.poliColor {
+    fill:white
+    
+}
+
+.poliColorW{
+
+    fill: black;
+}
+
+
+.colorTitulo{
+
+    background: rgba(86,159,153,1);
+background: -moz-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(86,159,153,1)), color-stop(12%, rgba(220,220,33,1)), color-stop(31%, rgba(247,234,57,1)), color-stop(52%, rgba(220,142,26,1)), color-stop(68%, rgba(183,18,81,1)), color-stop(85%, rgba(138,30,89,1)), color-stop(100%, rgba(89,39,127,1)));
+background: -webkit-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -o-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: -ms-linear-gradient(left, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+background: linear-gradient(to right, rgba(86,159,153,1) 0%, rgba(220,220,33,1) 12%, rgba(247,234,57,1) 31%, rgba(220,142,26,1) 52%, rgba(183,18,81,1) 68%, rgba(138,30,89,1) 85%, rgba(89,39,127,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#569f99', endColorstr='#59277f', GradientType=1 );
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: ;
+color: transparent;
+}
+
+.titulo{
+
+    text-transform: uppercase;
+    text-align: center;
+
+    font-size: 70px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.titulomd{
+    font-size: 40px;
+}
+
+.txtTitulo{
+    text-align: center;
+    font-size: 19px;
+    padding: 20px;
+
+}
+
+.contenedorSVGNegro{
+
+ position: absolute;
+margin-top: 0px;
+}
+
+.contenedorSVGW, .fondoW{
+
+    background-color: white;
+}
+
+
+.txtBlanco{
+
+    color: black;
+}
+
+
+.containerImg img {
+-webkit-transition:all 1.9s ease;
+-moz-transition:all 1.9s ease;
+-o-transition:all 1.9s ease;
+-ms-transition:all 1.9s ease;
+}
+
+.containerImg:hover img {
+-webkit-transform:scale(0.85);
+-moz-transform:scale(0.85);
+-ms-transform:scale(0.85);
+-o-transform:scale(0.85);
+transform:scale(0.85);
+}
+
+
+
+
+
 @media (max-width: 979px) {
 .efectoCapa {
 
@@ -486,3 +615,5 @@ margin: 2% auto;
 }
 
 }
+
+
