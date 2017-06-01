@@ -572,7 +572,7 @@ color: transparent;
 .contenedorSVGNegro{
 
  position: absolute;
-margin-top: 0px;
+margin-top: -3px;
 }
 
 .contenedorSVGW, .fondoW{
@@ -595,14 +595,23 @@ margin-top: 0px;
 }
 
 .containerImg:hover img {
--webkit-transform:scale(0.85);
--moz-transform:scale(0.85);
--ms-transform:scale(0.85);
--o-transform:scale(0.85);
-transform:scale(0.85);
+-webkit-transform:scale(1.5);
+-moz-transform:scale(1.5);
+-ms-transform:scale(1.5);
+-o-transform:scale(1.5);
+transform:scale(1.5);
 }
 
+.btnVotar{
+    margin: 0px !important;
+padding: 0px !important;
+border: none !important;
+}
 
+.containerImg{
+
+    overflow: hidden;
+}
 
 
 
@@ -612,6 +621,11 @@ transform:scale(0.85);
     max-width: 80% !important;
 padding: 0px;
 margin: 2% auto;
+}
+
+.centerEle{
+
+    margin-bottom: 40px;
 }
 
 }

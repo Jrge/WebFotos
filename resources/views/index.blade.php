@@ -104,10 +104,10 @@
 
     	<div class="row nomarggin" >
 
-    		<div class="col-md-6 col-xs-6 nomarggin centrado">
+    		<div class="col-md-6 col-xs-12 nomarggin centrado">
     			<img class="img-responsive nomarggin centerEle " src="image/participa2.jpg">
     		</div>
-    			<div class="col-md-6 col-xs-6 centerEle ">
+    			<div class="col-md-6 col-xs-12 centerEle ">
 				<h2 class="titulo colorTitulo titulomd">Sobre el concurso</h2>
 				<p class="txtTitulo">Si quieres participar es muy sencillo, sube tu fotografía, puedes participar en las categorias de naturaleza, urbano y artística, recibe votaciones.Las tres fotografías con más votaciones tendrán grandes recompensas.Para ello solo tienes que registrarte en el siguiente enlace</p>
     			<a href="{{url('auth/register')}}" class="btn btn-primary btn-lg active btnRegistrarse" role="button">Registrarse</a>
@@ -157,13 +157,23 @@
 
         <div class="row nomarggin">
             <div class="col-md-12 nomarggin">
+ <form method='post' action='{{url("votar")}}' enctype='multipart/form-data'>
+    {{csrf_field()}}
+             <button type="submit" name="selectCategoria" value="{{$categoria->idCategoria}}" class="btnVotar containerImg">
                <img class="img-responsive nomarggin" src="banners/{{$categoria->banner}}"></img>
             </div>  
+
+
+
+
+            </button>
+            </form>
+
+
         </div>
 
 
-            <div class="contenedorSVGNegro"><svg class="containerPoligono"><polygon class="poliColorW" points="3000 0 3000 100 0 100"></polygon></svg>
-        </div>
+       
 
 
 
