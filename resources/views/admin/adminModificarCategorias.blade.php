@@ -213,14 +213,6 @@
   <button type="submit" class="btnTabla btnCategori">Generar Categoria</button>
   </form>
 
-<script type="text/javascript">
-  alert('hola')
-
-    var foo = <?php  echo $categoria->Titulo?>;
-alert(foo)
-
-
-</script>
 
 <script>
 
