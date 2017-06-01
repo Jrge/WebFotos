@@ -33,7 +33,7 @@
 
   <div class='text-danger'>{{$errors->first('banner')}}</div>
    
-  <button type="submit" name="btnModificar" class="btnTabla btnCategori">Modificar Categoria</button>
+  <button type="submit" name="btnModificar" class="btnTabla btnCategori">Enviar</button>
   </form>
 
 

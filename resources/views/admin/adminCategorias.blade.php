@@ -209,7 +209,7 @@
 
    
    
-  <button type="submit" class="btnTabla btnCategori">Generar Categoria</button>
+  <button type="submit" class="btnTabla btnCategori">Enviar</button>
   </form>
 
 
