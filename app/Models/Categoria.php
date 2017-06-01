@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class Categoria extends Model
 {
 
+    protected $primaryKey = 'idCategoria';
 
     protected $fillable = ['idCategoria','Titulo', 'descripcion','limite','icono', 'banner'];
 
@@ -30,9 +31,12 @@ class Categoria extends Model
         $this->Titulo=$request->titulo;
         $this->descripcion=$request->descripcion;
         $this->limite=$request->limite;
-        $this->icono=$request->optradio;
-        $this->subirBanner($request);
+        //SE COMPRUEBA SI SE PASA FICHERO PARA ACTUALIZAR EL BANNER, SI NO SE DEJA EL MISMO QUE TENGA EN ESTOS MOMENTOS.
+        if($request->file('banner')!=null){
+            $this->subirBanner($request);            
+        }
         $this->save();
+        return true;
     }
 
     public function subirBanner(Request $request){

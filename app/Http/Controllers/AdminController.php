@@ -21,6 +21,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Categoria;
 use App\Models\Foto;
 use App\Http\Requests\CrearCategoriasRequest;
+use App\Http\Requests\ModificarCategoriaRequest;
 
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
@@ -57,14 +58,6 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
     //METODO POST DE LISTADO FOTOS
      public function devuelvelistadoFotos(Request $request){
-   /*     dd($request->input('alumno'));
-        if($request->input('categoria')=='todos'){
-            $fotos=Foto::orderBy('votos','DESC')->paginate($request->input('numResultados'));
-        }else{
-            $fotos=Foto::where('tipoParticipante',$request->input('categoria'))->orderBy('votos','DESC')
-            ->paginate($request->input('numResultados'));
-        }
-*/
         $query=Foto::query();
 
         if($request->input('alumno')!=null){
@@ -96,7 +89,6 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
     public function devuelveUsuarios(){
     $listaUsuarios = User::paginate(10);
        return View('admin.adminAdministradores',compact('listaUsuarios'));
-
     }
 
     public function gestionarCategorias(CrearCategoriasRequest $request){
@@ -131,8 +123,6 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
 
 
      public function gestionarUsuarios(Request $request){
-           // $claseExitosa="alert alert-success";
-            //$claseError="alert alert-danger";
             $idUsuario = $request->input('promocionar');
             $usuario=User::find($idUsuario);
             if($usuario!=null && !$usuario->isAdmin()){
@@ -143,17 +133,26 @@ Si no es administrador no le retorna la vista si lo es puede acceder a la vista
             }elseif($usuario!=null && $usuario->isAdmin()){
                 return redirect("adminAdministradores")
                 ->with("mensaje", "Este usuario ya es Administrador")
-                //->with("claseMsg","alert alert-danger")
                 ->withInput();  
             }
 
     }
 
 
-    public function modificarCategorias(){
-        $variable=Input::get('btnCambiar');
-        $categoria = DB::table('categorias')->where('idCategoria', $variable)->first();
-        return View('admin.adminModificarCategorias',compact('categoria'));
+    public function modificarCategorias(Request $request){
+        //comprobamos si estamos en la vista que nos muestra las categorias existentes
+        if($request->exists('btnCambiar')){
+            $variable=Input::get('btnCambiar');
+            $categoria = DB::table('categorias')->where('idCategoria', $variable)->first();
+            return View('admin.adminModificarCategorias',compact('categoria'));            
+        }elseif($request->exists('btnModificar')){ //si no es que ya se ha seleccionado la categoría a modificar.
+            $categoria=Categoria::where('idCategoria',$request->idCategoria)->first();
+            if($categoria->actualizarCategoria($request)){
+                return View('admin.adminModificarCategorias')
+                ->with("categoria",$categoria)
+                ->with("mensaje","Categoria modificada correctamente."); 
+            }
+        }
 
     }
 
